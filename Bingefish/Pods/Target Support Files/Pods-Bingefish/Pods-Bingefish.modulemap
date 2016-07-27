@@ -1,0 +1,6 @@
+framework module Pods_Bingefish {
+  umbrella header "Pods-Bingefish-umbrella.h"
+
+  export *
+  module * { export * }
+}

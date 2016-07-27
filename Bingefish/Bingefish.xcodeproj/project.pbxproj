@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1122827757C05CA9A03747BC /* Pods_BingefishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147B7D6BED5FD42721A3BC01 /* Pods_BingefishUITests.framework */; };
+		3755E60C1D4824210057081C /* BingefishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E60B1D4824210057081C /* BingefishTests.swift */; };
+		3755E6171D4824210057081C /* BingefishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E6161D4824210057081C /* BingefishUITests.swift */; };
+		37A49A121D484B30006FE686 /* EBTExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A111D484B30006FE686 /* EBTExtractor.m */; };
+		37ADD13A1D4834B5003E1D2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ADD1391D4834B5003E1D2E /* Main.storyboard */; };
+		37ADD13C1D483537003E1D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ADD13B1D483537003E1D2E /* LaunchScreen.storyboard */; };
+		37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADD13E1D48404A003E1D2E /* BFShow.swift */; };
+		37D09AF11D482AED000DD4C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D09AF01D482AED000DD4C2 /* Assets.xcassets */; };
+		37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF31D482AFA000DD4C2 /* AppDelegate.swift */; };
+		37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */; };
+		37D09AF91D482AFA000DD4C2 /* BFSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF61D482AFA000DD4C2 /* BFSearchViewController.swift */; };
+		37D09B001D482B4B000DD4C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37D09AFF1D482B4B000DD4C2 /* Info.plist */; };
+		37D09B031D482CAE000DD4C2 /* BFServerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B021D482CAE000DD4C2 /* BFServerController.swift */; };
+		37D09B051D482CBE000DD4C2 /* BFApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B041D482CBE000DD4C2 /* BFApp.swift */; };
+		37D09B081D482F25000DD4C2 /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B071D482F25000DD4C2 /* BFConfig.swift */; };
+		A6E08D568DA7083A6F80891C /* Pods_BingefishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0FD54A15D9B806C241CEFC /* Pods_BingefishTests.framework */; };
+		B6C44BD42EB5186899FD027C /* Pods_Bingefish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A817476E4210B22A125962 /* Pods_Bingefish.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3755E6081D4824210057081C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3755E5E91D4824210057081C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3755E5F01D4824210057081C;
+			remoteInfo = Bingefish;
+		};
+		3755E6131D4824210057081C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3755E5E91D4824210057081C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3755E5F01D4824210057081C;
+			remoteInfo = Bingefish;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		147B7D6BED5FD42721A3BC01 /* Pods_BingefishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingefishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3755E5F11D4824210057081C /* Bingefish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingefish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3755E6071D4824210057081C /* BingefishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BingefishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3755E60B1D4824210057081C /* BingefishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingefishTests.swift; sourceTree = "<group>"; };
+		3755E60D1D4824210057081C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3755E6121D4824210057081C /* BingefishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BingefishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3755E6161D4824210057081C /* BingefishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingefishUITests.swift; sourceTree = "<group>"; };
+		3755E6181D4824210057081C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A49A0F1D484B30006FE686 /* EBTExtractor+DirectObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EBTExtractor+DirectObject.h"; sourceTree = "<group>"; };
+		37A49A101D484B30006FE686 /* EBTExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTExtractor.h; sourceTree = "<group>"; };
+		37A49A111D484B30006FE686 /* EBTExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTExtractor.m; sourceTree = "<group>"; };
+		37A49A131D484BFF006FE686 /* Bingefish-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bingefish-Bridging-Header.h"; sourceTree = "<group>"; };
+		37ADD1391D4834B5003E1D2E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		37ADD13B1D483537003E1D2E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37ADD13E1D48404A003E1D2E /* BFShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShow.swift; sourceTree = "<group>"; };
+		37D09AF01D482AED000DD4C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37D09AF31D482AFA000DD4C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFFeedViewController.swift; sourceTree = "<group>"; };
+		37D09AF61D482AFA000DD4C2 /* BFSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFSearchViewController.swift; sourceTree = "<group>"; };
+		37D09AFF1D482B4B000DD4C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D09B021D482CAE000DD4C2 /* BFServerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFServerController.swift; sourceTree = "<group>"; };
+		37D09B041D482CBE000DD4C2 /* BFApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFApp.swift; sourceTree = "<group>"; };
+		37D09B071D482F25000DD4C2 /* BFConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
+		37D09B091D483204000DD4C2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		55A817476E4210B22A125962 /* Pods_Bingefish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bingefish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94FC625848E783FFAA1326F3 /* Pods-BingefishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingefishTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BingefishTests/Pods-BingefishTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BC1C129E344E6C4AD34CB2B /* Pods-BingefishUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingefishUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BingefishUITests/Pods-BingefishUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACDEA9C19835FD56DC3C07C9 /* Pods-BingefishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingefishUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BingefishUITests/Pods-BingefishUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D739339AEAF62C40DD85E94B /* Pods-Bingefish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bingefish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bingefish/Pods-Bingefish.release.xcconfig"; sourceTree = "<group>"; };
+		DF0FD54A15D9B806C241CEFC /* Pods_BingefishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingefishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA73A80B0576D1FFE53732A8 /* Pods-BingefishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingefishTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BingefishTests/Pods-BingefishTests.release.xcconfig"; sourceTree = "<group>"; };
+		F698BE4E0746542A85AFFD5A /* Pods-Bingefish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bingefish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bingefish/Pods-Bingefish.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3755E5EE1D4824210057081C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C44BD42EB5186899FD027C /* Pods_Bingefish.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3755E6041D4824210057081C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6E08D568DA7083A6F80891C /* Pods_BingefishTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3755E60F1D4824210057081C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1122827757C05CA9A03747BC /* Pods_BingefishUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3755E5E81D4824210057081C = {
+			isa = PBXGroup;
+			children = (
+				37A49A131D484BFF006FE686 /* Bingefish-Bridging-Header.h */,
+				37D09AF01D482AED000DD4C2 /* Assets.xcassets */,
+				3755E60A1D4824210057081C /* BingefishTests */,
+				3755E6151D4824210057081C /* BingefishUITests */,
+				37D09AF21D482AFA000DD4C2 /* Code */,
+				F44D9ABF50BD594B7B34F046 /* Frameworks */,
+				37D09AFF1D482B4B000DD4C2 /* Info.plist */,
+				37A49A0D1D484B30006FE686 /* Libraries */,
+				930D9805A346142FBD6248E9 /* Pods */,
+				3755E5F21D4824210057081C /* Products */,
+				37D09AFA1D482B10000DD4C2 /* Storyboards */,
+			);
+			sourceTree = "<group>";
+		};
+		3755E5F21D4824210057081C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3755E5F11D4824210057081C /* Bingefish.app */,
+				3755E6071D4824210057081C /* BingefishTests.xctest */,
+				3755E6121D4824210057081C /* BingefishUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3755E60A1D4824210057081C /* BingefishTests */ = {
+			isa = PBXGroup;
+			children = (
+				3755E60B1D4824210057081C /* BingefishTests.swift */,
+				3755E60D1D4824210057081C /* Info.plist */,
+			);
+			path = BingefishTests;
+			sourceTree = "<group>";
+		};
+		3755E6151D4824210057081C /* BingefishUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3755E6161D4824210057081C /* BingefishUITests.swift */,
+				3755E6181D4824210057081C /* Info.plist */,
+			);
+			path = BingefishUITests;
+			sourceTree = "<group>";
+		};
+		37A49A0D1D484B30006FE686 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				37A49A0E1D484B30006FE686 /* EBTExtractor */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		37A49A0E1D484B30006FE686 /* EBTExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				37A49A0F1D484B30006FE686 /* EBTExtractor+DirectObject.h */,
+				37A49A101D484B30006FE686 /* EBTExtractor.h */,
+				37A49A111D484B30006FE686 /* EBTExtractor.m */,
+			);
+			path = EBTExtractor;
+			sourceTree = "<group>";
+		};
+		37ADD13D1D484027003E1D2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37ADD13E1D48404A003E1D2E /* BFShow.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37D09AF21D482AFA000DD4C2 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				37D09AF31D482AFA000DD4C2 /* AppDelegate.swift */,
+				37D09B061D482F14000DD4C2 /* Config */,
+				37D09B011D482C4D000DD4C2 /* Controller */,
+				37ADD13D1D484027003E1D2E /* Model */,
+				37D09AF41D482AFA000DD4C2 /* ViewController */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		37D09AF41D482AFA000DD4C2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */,
+				37D09AF61D482AFA000DD4C2 /* BFSearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		37D09AFA1D482B10000DD4C2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				37ADD1391D4834B5003E1D2E /* Main.storyboard */,
+				37ADD13B1D483537003E1D2E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		37D09B011D482C4D000DD4C2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37D09B021D482CAE000DD4C2 /* BFServerController.swift */,
+				37D09B041D482CBE000DD4C2 /* BFApp.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37D09B061D482F14000DD4C2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				37D09B071D482F25000DD4C2 /* BFConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		930D9805A346142FBD6248E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F698BE4E0746542A85AFFD5A /* Pods-Bingefish.debug.xcconfig */,
+				D739339AEAF62C40DD85E94B /* Pods-Bingefish.release.xcconfig */,
+				94FC625848E783FFAA1326F3 /* Pods-BingefishTests.debug.xcconfig */,
+				EA73A80B0576D1FFE53732A8 /* Pods-BingefishTests.release.xcconfig */,
+				9BC1C129E344E6C4AD34CB2B /* Pods-BingefishUITests.debug.xcconfig */,
+				ACDEA9C19835FD56DC3C07C9 /* Pods-BingefishUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F44D9ABF50BD594B7B34F046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37D09B091D483204000DD4C2 /* Alamofire.framework */,
+				55A817476E4210B22A125962 /* Pods_Bingefish.framework */,
+				DF0FD54A15D9B806C241CEFC /* Pods_BingefishTests.framework */,
+				147B7D6BED5FD42721A3BC01 /* Pods_BingefishUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3755E5F01D4824210057081C /* Bingefish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3755E61B1D4824210057081C /* Build configuration list for PBXNativeTarget "Bingefish" */;
+			buildPhases = (
+				19A02DCA45C6916C5A819A14 /* 📦 Check Pods Manifest.lock */,
+				3755E5ED1D4824210057081C /* Sources */,
+				3755E5EE1D4824210057081C /* Frameworks */,
+				3755E5EF1D4824210057081C /* Resources */,
+				6330DC264C038D05CECE2D38 /* 📦 Embed Pods Frameworks */,
+				49C8F49C368B98067D3B6474 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bingefish;
+			productName = Bingefish;
+			productReference = 3755E5F11D4824210057081C /* Bingefish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3755E6061D4824210057081C /* BingefishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3755E61E1D4824210057081C /* Build configuration list for PBXNativeTarget "BingefishTests" */;
+			buildPhases = (
+				195B8E17A84D45784C7219A5 /* 📦 Check Pods Manifest.lock */,
+				3755E6031D4824210057081C /* Sources */,
+				3755E6041D4824210057081C /* Frameworks */,
+				3755E6051D4824210057081C /* Resources */,
+				D352BEE18438FE239A453571 /* 📦 Embed Pods Frameworks */,
+				827FDC211228C47E8DB9B416 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3755E6091D4824210057081C /* PBXTargetDependency */,
+			);
+			name = BingefishTests;
+			productName = BingefishTests;
+			productReference = 3755E6071D4824210057081C /* BingefishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3755E6111D4824210057081C /* BingefishUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3755E6211D4824210057081C /* Build configuration list for PBXNativeTarget "BingefishUITests" */;
+			buildPhases = (
+				416B21FD3816DA0AE6E2F0B6 /* 📦 Check Pods Manifest.lock */,
+				3755E60E1D4824210057081C /* Sources */,
+				3755E60F1D4824210057081C /* Frameworks */,
+				3755E6101D4824210057081C /* Resources */,
+				7A6D13043CE89A26CC9417C2 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3755E6141D4824210057081C /* PBXTargetDependency */,
+			);
+			name = BingefishUITests;
+			productName = BingefishUITests;
+			productReference = 3755E6121D4824210057081C /* BingefishUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3755E5E91D4824210057081C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Bingefish;
+				TargetAttributes = {
+					3755E5F01D4824210057081C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L5GKNB78UR;
+						DevelopmentTeamName = "Genki Mine";
+						ProvisioningStyle = Automatic;
+					};
+					3755E6061D4824210057081C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L5GKNB78UR;
+						DevelopmentTeamName = "Genki Mine";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3755E5F01D4824210057081C;
+					};
+					3755E6111D4824210057081C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L5GKNB78UR;
+						DevelopmentTeamName = "Genki Mine";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3755E5F01D4824210057081C;
+					};
+				};
+			};
+			buildConfigurationList = 3755E5EC1D4824210057081C /* Build configuration list for PBXProject "Bingefish" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3755E5E81D4824210057081C;
+			productRefGroup = 3755E5F21D4824210057081C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3755E5F01D4824210057081C /* Bingefish */,
+				3755E6061D4824210057081C /* BingefishTests */,
+				3755E6111D4824210057081C /* BingefishUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3755E5EF1D4824210057081C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D09B001D482B4B000DD4C2 /* Info.plist in Resources */,
+				37ADD13C1D483537003E1D2E /* LaunchScreen.storyboard in Resources */,
+				37D09AF11D482AED000DD4C2 /* Assets.xcassets in Resources */,
+				37ADD13A1D4834B5003E1D2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3755E6051D4824210057081C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3755E6101D4824210057081C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		195B8E17A84D45784C7219A5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		19A02DCA45C6916C5A819A14 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		416B21FD3816DA0AE6E2F0B6 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49C8F49C368B98067D3B6474 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bingefish/Pods-Bingefish-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6330DC264C038D05CECE2D38 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bingefish/Pods-Bingefish-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A6D13043CE89A26CC9417C2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BingefishUITests/Pods-BingefishUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827FDC211228C47E8DB9B416 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BingefishTests/Pods-BingefishTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D352BEE18438FE239A453571 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BingefishTests/Pods-BingefishTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3755E5ED1D4824210057081C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A49A121D484B30006FE686 /* EBTExtractor.m in Sources */,
+				37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */,
+				37D09AF91D482AFA000DD4C2 /* BFSearchViewController.swift in Sources */,
+				37D09B031D482CAE000DD4C2 /* BFServerController.swift in Sources */,
+				37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */,
+				37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */,
+				37D09B051D482CBE000DD4C2 /* BFApp.swift in Sources */,
+				37D09B081D482F25000DD4C2 /* BFConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3755E6031D4824210057081C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3755E60C1D4824210057081C /* BingefishTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3755E60E1D4824210057081C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3755E6171D4824210057081C /* BingefishUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3755E6091D4824210057081C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3755E5F01D4824210057081C /* Bingefish */;
+			targetProxy = 3755E6081D4824210057081C /* PBXContainerItemProxy */;
+		};
+		3755E6141D4824210057081C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3755E5F01D4824210057081C /* Bingefish */;
+			targetProxy = 3755E6131D4824210057081C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3755E6191D4824210057081C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bingefish-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3755E61A1D4824210057081C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bingefish-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3755E61C1D4824210057081C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F698BE4E0746542A85AFFD5A /* Pods-Bingefish.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+				);
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingefish.Bingefish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3755E61D1D4824210057081C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D739339AEAF62C40DD85E94B /* Pods-Bingefish.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+				);
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingefish.Bingefish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3755E61F1D4824210057081C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94FC625848E783FFAA1326F3 /* Pods-BingefishTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BingefishTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingefish.BingefishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bingefish.app/Bingefish";
+			};
+			name = Debug;
+		};
+		3755E6201D4824210057081C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA73A80B0576D1FFE53732A8 /* Pods-BingefishTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BingefishTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingefish.BingefishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bingefish.app/Bingefish";
+			};
+			name = Release;
+		};
+		3755E6221D4824210057081C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC1C129E344E6C4AD34CB2B /* Pods-BingefishUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BingefishUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingefish.BingefishUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Bingefish;
+			};
+			name = Debug;
+		};
+		3755E6231D4824210057081C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACDEA9C19835FD56DC3C07C9 /* Pods-BingefishUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BingefishUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingefish.BingefishUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Bingefish;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3755E5EC1D4824210057081C /* Build configuration list for PBXProject "Bingefish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3755E6191D4824210057081C /* Debug */,
+				3755E61A1D4824210057081C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3755E61B1D4824210057081C /* Build configuration list for PBXNativeTarget "Bingefish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3755E61C1D4824210057081C /* Debug */,
+				3755E61D1D4824210057081C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3755E61E1D4824210057081C /* Build configuration list for PBXNativeTarget "BingefishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3755E61F1D4824210057081C /* Debug */,
+				3755E6201D4824210057081C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3755E6211D4824210057081C /* Build configuration list for PBXNativeTarget "BingefishUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3755E6221D4824210057081C /* Debug */,
+				3755E6231D4824210057081C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3755E5E91D4824210057081C /* Project object */;
+}
