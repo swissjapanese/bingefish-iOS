@@ -7,6 +7,7 @@ target 'Bingefish' do
 
   # Pods for Bingefish
   pod 'Alamofire', '~> 3.4'
+  pod 'AlamofireImage', '~> 2.0'
 
   target 'BingefishTests' do
     inherit! :search_paths

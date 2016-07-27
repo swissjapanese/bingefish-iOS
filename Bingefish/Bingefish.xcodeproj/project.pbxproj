@@ -11,6 +11,8 @@
 		3755E60C1D4824210057081C /* BingefishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E60B1D4824210057081C /* BingefishTests.swift */; };
 		3755E6171D4824210057081C /* BingefishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E6161D4824210057081C /* BingefishUITests.swift */; };
 		37A49A121D484B30006FE686 /* EBTExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A111D484B30006FE686 /* EBTExtractor.m */; };
+		37A49A161D4851DB006FE686 /* BFShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A49A151D4851DB006FE686 /* BFShowCollectionViewCell.xib */; };
+		37A49A191D485228006FE686 /* BFShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A181D485228006FE686 /* BFShowCollectionViewCell.swift */; };
 		37ADD13A1D4834B5003E1D2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ADD1391D4834B5003E1D2E /* Main.storyboard */; };
 		37ADD13C1D483537003E1D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ADD13B1D483537003E1D2E /* LaunchScreen.storyboard */; };
 		37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADD13E1D48404A003E1D2E /* BFShow.swift */; };
@@ -18,7 +20,6 @@
 		37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF31D482AFA000DD4C2 /* AppDelegate.swift */; };
 		37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */; };
 		37D09AF91D482AFA000DD4C2 /* BFSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF61D482AFA000DD4C2 /* BFSearchViewController.swift */; };
-		37D09B001D482B4B000DD4C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37D09AFF1D482B4B000DD4C2 /* Info.plist */; };
 		37D09B031D482CAE000DD4C2 /* BFServerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B021D482CAE000DD4C2 /* BFServerController.swift */; };
 		37D09B051D482CBE000DD4C2 /* BFApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B041D482CBE000DD4C2 /* BFApp.swift */; };
 		37D09B081D482F25000DD4C2 /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B071D482F25000DD4C2 /* BFConfig.swift */; };
@@ -56,6 +57,8 @@
 		37A49A101D484B30006FE686 /* EBTExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTExtractor.h; sourceTree = "<group>"; };
 		37A49A111D484B30006FE686 /* EBTExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTExtractor.m; sourceTree = "<group>"; };
 		37A49A131D484BFF006FE686 /* Bingefish-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bingefish-Bridging-Header.h"; sourceTree = "<group>"; };
+		37A49A151D4851DB006FE686 /* BFShowCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFShowCollectionViewCell.xib; sourceTree = "<group>"; };
+		37A49A181D485228006FE686 /* BFShowCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		37ADD1391D4834B5003E1D2E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		37ADD13B1D483537003E1D2E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37ADD13E1D48404A003E1D2E /* BFShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShow.swift; sourceTree = "<group>"; };
@@ -109,8 +112,8 @@
 		3755E5E81D4824210057081C = {
 			isa = PBXGroup;
 			children = (
-				37A49A131D484BFF006FE686 /* Bingefish-Bridging-Header.h */,
 				37D09AF01D482AED000DD4C2 /* Assets.xcassets */,
+				37A49A131D484BFF006FE686 /* Bingefish-Bridging-Header.h */,
 				3755E60A1D4824210057081C /* BingefishTests */,
 				3755E6151D4824210057081C /* BingefishUITests */,
 				37D09AF21D482AFA000DD4C2 /* Code */,
@@ -120,6 +123,7 @@
 				930D9805A346142FBD6248E9 /* Pods */,
 				3755E5F21D4824210057081C /* Products */,
 				37D09AFA1D482B10000DD4C2 /* Storyboards */,
+				37A49A141D4851C0006FE686 /* Xib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +173,22 @@
 			path = EBTExtractor;
 			sourceTree = "<group>";
 		};
+		37A49A141D4851C0006FE686 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				37A49A151D4851DB006FE686 /* BFShowCollectionViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		37A49A171D485207006FE686 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37A49A181D485228006FE686 /* BFShowCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		37ADD13D1D484027003E1D2E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +204,7 @@
 				37D09B061D482F14000DD4C2 /* Config */,
 				37D09B011D482C4D000DD4C2 /* Controller */,
 				37ADD13D1D484027003E1D2E /* Model */,
+				37A49A171D485207006FE686 /* View */,
 				37D09AF41D482AFA000DD4C2 /* ViewController */,
 			);
 			path = Code;
@@ -319,7 +340,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Bingefish;
 				TargetAttributes = {
 					3755E5F01D4824210057081C = {
@@ -369,7 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D09B001D482B4B000DD4C2 /* Info.plist in Resources */,
+				37A49A161D4851DB006FE686 /* BFShowCollectionViewCell.xib in Resources */,
 				37ADD13C1D483537003E1D2E /* LaunchScreen.storyboard in Resources */,
 				37D09AF11D482AED000DD4C2 /* Assets.xcassets in Resources */,
 				37ADD13A1D4834B5003E1D2E /* Main.storyboard in Resources */,
@@ -527,6 +548,7 @@
 				37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */,
 				37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */,
 				37D09B051D482CBE000DD4C2 /* BFApp.swift in Sources */,
+				37A49A191D485228006FE686 /* BFShowCollectionViewCell.swift in Sources */,
 				37D09B081D482F25000DD4C2 /* BFConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

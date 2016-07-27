@@ -12,14 +12,25 @@ import Alamofire
 class BFServerController: NSObject 
 {
     var config: BFConfig!
+    var operationQueue = NSOperationQueue()
     
     // MARK: APIs
+    
+    override init()
+    {
+        operationQueue.name = "BFServerController.operationQueue"
+        operationQueue.maxConcurrentOperationCount = 5
+    }
     
     func search(query: String, completionHandler: (shows: [BFShow]?, response: Response<AnyObject, NSError>) -> Void)
     {
         let api = "search"
         let parameters = ["query": query]
-        request(.GET, api: api, parameters: parameters) { response in
+        request(.GET, api: api, parameters: parameters) { [weak self] response in
+            guard let _ = self else {
+                return 
+            }
+            
             var shows = [BFShow]()
             if let json = response.result.value {
                 if let array = json as? NSArray {
@@ -39,9 +50,18 @@ class BFServerController: NSObject
     
     private func request(method: Alamofire.Method, api: String!, parameters: [String: String], completionHandler: Response<AnyObject, NSError> -> Void)
     {
-        Alamofire.request(method, "\(config.BFConfigMainURL)\(config.BFConfigAPIVersion)\(api)", parameters: parameters)
-            .responseJSON { response in
-                completionHandler(response)
+        let blockOperation = NSBlockOperation { [weak self] in
+            guard let strongSelf = self else {
+                return 
+            }
+
+            Alamofire.request(method, "\(strongSelf.config.BFConfigMainURL)\(strongSelf.config.BFConfigAPIVersion)\(api)", parameters: parameters)
+                .responseJSON { response in
+                    print("success ")
+                    completionHandler(response)
+            }
         }
+        
+        operationQueue.addOperation(blockOperation)
     }
 }

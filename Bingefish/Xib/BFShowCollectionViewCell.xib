@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BFShowCollectionViewCellReuseIdentifier" id="Lby-uZ-bdP" customClass="BFShowCollectionViewCell" customModule="Bingefish" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="323"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="323"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Series Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ong-me-Y2Z">
+                        <rect key="frame" x="13" y="8" width="279" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yn6-oM-Yfw">
+                        <rect key="frame" x="0.0" y="36" width="300" height="169"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Yn6-oM-Yfw" secondAttribute="height" multiplier="300:169" id="cko-93-IYo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-ib-zQX">
+                        <rect key="frame" x="8" y="216" width="284" height="82"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="82" id="BbJ-Zm-ucq"/>
+                        </constraints>
+                        <string key="text">#Lorem ipsum dolor sit amet, cu iisque aliquid vel. Pro eros harum an. An habemus mandamus nam, efficiantur ullamcorper ea cum. Odio fabellas vel et, nam duis facete at.
+</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HQc-ib-zQX" secondAttribute="bottom" constant="25" id="7DI-aO-Q0u"/>
+                <constraint firstItem="Ong-me-Y2Z" firstAttribute="leading" secondItem="Lby-uZ-bdP" secondAttribute="leading" constant="13" id="8Mb-97-9CS"/>
+                <constraint firstItem="Yn6-oM-Yfw" firstAttribute="leading" secondItem="Lby-uZ-bdP" secondAttribute="leading" id="CXK-7B-o7g"/>
+                <constraint firstItem="Ong-me-Y2Z" firstAttribute="trailing" secondItem="HQc-ib-zQX" secondAttribute="trailing" id="HQ0-SW-G5c"/>
+                <constraint firstItem="HQc-ib-zQX" firstAttribute="leading" secondItem="Lby-uZ-bdP" secondAttribute="leadingMargin" id="Iak-TY-jkS"/>
+                <constraint firstItem="HQc-ib-zQX" firstAttribute="top" secondItem="Yn6-oM-Yfw" secondAttribute="bottom" constant="11" id="Lne-FM-tpv"/>
+                <constraint firstItem="Yn6-oM-Yfw" firstAttribute="centerX" secondItem="HQc-ib-zQX" secondAttribute="centerX" id="a6b-uR-hyN"/>
+                <constraint firstItem="Yn6-oM-Yfw" firstAttribute="top" secondItem="Ong-me-Y2Z" secondAttribute="bottom" constant="7" id="kTU-Vb-S1t"/>
+                <constraint firstItem="Ong-me-Y2Z" firstAttribute="top" secondItem="Lby-uZ-bdP" secondAttribute="topMargin" id="q7q-wm-Pro"/>
+                <constraint firstAttribute="trailing" secondItem="Yn6-oM-Yfw" secondAttribute="trailing" id="quL-wq-r7d"/>
+            </constraints>
+            <size key="customSize" width="411" height="323"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="7DI-aO-Q0u"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="mainImageView" destination="Yn6-oM-Yfw" id="vCY-hG-gtZ"/>
+                <outlet property="overviewLabel" destination="HQc-ib-zQX" id="86U-2h-tuq"/>
+                <outlet property="titleLabel" destination="Ong-me-Y2Z" id="vjm-Yc-N83"/>
+            </connections>
+            <point key="canvasLocation" x="318" y="327.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

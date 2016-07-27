@@ -4,25 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
-        <scene sceneID="P4L-Of-3cZ">
-            <objects>
-                <viewController id="uCb-1y-9am" customClass="BFSearchViewController" customModule="Bingefish" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8X7-jq-VRS"/>
-                        <viewControllerLayoutGuide type="bottom" id="XDM-Na-AsT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I1y-8R-2YA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="tQw-SU-9YA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qtj-Tu-9ai" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2628" y="784"/>
-        </scene>
         <!--Feed View Controller-->
         <scene sceneID="qgj-ke-lCc">
             <objects>
@@ -53,6 +34,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOo-sn-Ksg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2628" y="123"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="0wy-i8-kkY">
+            <objects>
+                <viewController id="dzB-Im-azk" customClass="BFSearchViewController" customModule="Bingefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1xg-yN-fpl"/>
+                        <viewControllerLayoutGuide type="bottom" id="G5k-cr-EKc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OXR-YE-j7M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JRD-KC-f97">
+                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IqY-WC-R6R">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lmm-FH-1aK">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="dzB-Im-azk" id="xUg-G1-D5M"/>
+                                    <outlet property="delegate" destination="dzB-Im-azk" id="smc-9T-Lx8"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwx-Yk-5H9">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.74754249849999999" green="0.87843266310000001" blue="0.38326831360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xwx-Yk-5H9" firstAttribute="trailing" secondItem="JRD-KC-f97" secondAttribute="trailing" id="1ju-Eu-rOt"/>
+                            <constraint firstItem="JRD-KC-f97" firstAttribute="leading" secondItem="OXR-YE-j7M" secondAttribute="leading" id="9BY-Vz-B8N"/>
+                            <constraint firstItem="Xwx-Yk-5H9" firstAttribute="leading" secondItem="JRD-KC-f97" secondAttribute="leading" id="9qU-3s-UD8"/>
+                            <constraint firstItem="JRD-KC-f97" firstAttribute="top" secondItem="Xwx-Yk-5H9" secondAttribute="bottom" id="Bzv-83-lhp"/>
+                            <constraint firstItem="JRD-KC-f97" firstAttribute="bottom" secondItem="G5k-cr-EKc" secondAttribute="top" id="Qvq-W3-nPr"/>
+                            <constraint firstItem="JRD-KC-f97" firstAttribute="top" secondItem="1xg-yN-fpl" secondAttribute="bottom" constant="44" id="VVX-BJ-aFE"/>
+                            <constraint firstItem="Xwx-Yk-5H9" firstAttribute="top" secondItem="1xg-yN-fpl" secondAttribute="bottom" id="prA-mq-Bj6"/>
+                            <constraint firstAttribute="trailing" secondItem="JRD-KC-f97" secondAttribute="trailing" id="rkj-eh-Vdd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zOI-Qg-Gdj"/>
+                    <connections>
+                        <outlet property="collectionView" destination="JRD-KC-f97" id="jCq-yR-0GO"/>
+                        <outlet property="searchBarBackgroundView" destination="Xwx-Yk-5H9" id="jo0-y2-56Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqf-VU-K7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="818"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M3X-ld-ppJ">
@@ -103,7 +148,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="uCb-1y-9am" kind="relationship" relationship="rootViewController" id="9f8-UJ-QaP"/>
+                        <segue destination="dzB-Im-azk" kind="relationship" relationship="rootViewController" id="fb8-pS-MEU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQm-Lk-78Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
