@@ -47,14 +47,11 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView!.registerNib(UINib(nibName: "BFShowCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: BFShowCollectionViewCellReuseIdentifier)
     }
 
-    override func didReceiveMemoryWarning()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) 
     {
-        super.didReceiveMemoryWarning()
-    }
-    
-    override func viewDidAppear(animated: Bool)
-    {
-        super.viewDidAppear(animated)
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
     }
     
     // MARK: - UICollectionViewController
@@ -92,7 +89,24 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize 
     {
-        return BFShowCollectionViewCell.preferredSize(collectionView, collectionViewLayout: collectionViewLayout)
+        return BFShowCollectionViewCell.preferredSize(collectionView, collectionViewLayout: collectionViewLayout, show: shows?[indexPath.row])
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) 
+    {
+        let storyboard = UIStoryboard(name: "Show", bundle: nil)
+        if let showViewController = storyboard.instantiateViewControllerWithIdentifier("BFShowViewControllerID") as? BFShowViewController {
+            showViewController.show = shows?[indexPath.row]
+            
+            if BFHelper.isIPhoneOrIPod() {
+                self.navigationController?.pushViewController(showViewController, animated: true)
+            }
+            else if BFHelper.isIPad() {
+                let navigationController = showViewController.embedInNavigationController(true)
+                navigationController.modalPresentationStyle = .FormSheet
+                self.navigationController?.presentViewController(navigationController, animated: true, completion: nil)
+            }
+        }
     }
     
     // MARK: - UISearchResultUpdating

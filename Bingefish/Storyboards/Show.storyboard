@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Show View Controller-->
+        <scene sceneID="S7R-c5-6J4">
+            <objects>
+                <viewController storyboardIdentifier="BFShowViewControllerID" id="vWo-fH-mpm" customClass="BFShowViewController" customModule="Bingefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OmP-Bw-aTs"/>
+                        <viewControllerLayoutGuide type="bottom" id="GSz-pk-pNL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vuw-FM-QjR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzu-ze-n7G">
+                                <rect key="frame" x="79" y="233" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-iL-7CX">
+                                <rect key="frame" x="74" y="82" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYh-ja-rsE">
+                                <rect key="frame" x="79" y="28" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BYh-ja-rsE" firstAttribute="centerY" secondItem="Vuw-FM-QjR" secondAttribute="centerY" constant="-261.5" id="a3F-V1-dWC"/>
+                            <constraint firstItem="BYh-ja-rsE" firstAttribute="centerX" secondItem="Vuw-FM-QjR" secondAttribute="centerX" constant="-201.5" id="lX8-H6-BxC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d3Q-uh-XXb"/>
+                    <connections>
+                        <outlet property="mainImageView" destination="xbh-iL-7CX" id="OTh-Wy-Rmf"/>
+                        <outlet property="overviewLabel" destination="yzu-ze-n7G" id="HT2-kR-tZF"/>
+                        <outlet property="titleLabel" destination="BYh-ja-rsE" id="pIz-nr-9NO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEz-nt-zSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="372"/>
+        </scene>
+    </scenes>
+</document>

@@ -13,8 +13,8 @@ class BFServerController: NSObject
 {
     var config: BFConfig!
     var operationQueue = NSOperationQueue()
-    
-    // MARK: APIs
+        
+    // MARK: Init
     
     override init()
     {
@@ -22,6 +22,8 @@ class BFServerController: NSObject
         operationQueue.maxConcurrentOperationCount = 5
     }
     
+    // MARK: APIs
+
     func search(query: String, completionHandler: (shows: [BFShow]?, response: Response<AnyObject, NSError>) -> Void)
     {
         let api = "search"
@@ -32,12 +34,10 @@ class BFServerController: NSObject
             }
             
             var shows = [BFShow]()
-            if let json = response.result.value {
-                if let array = json as? NSArray {
-                    for show in array {
-                        if let show = BFShow(dictionary: show as! [String : AnyObject]) {
-                            shows.append(show)
-                        }
+            if let json = response.result.value, let array = json as? NSArray {
+                for show in array {
+                    if let show = BFShow(dictionary: show as! [String : AnyObject]) {
+                        shows.append(show)
                     }
                 }
             }
@@ -57,7 +57,6 @@ class BFServerController: NSObject
 
             Alamofire.request(method, "\(strongSelf.config.BFConfigMainURL)\(strongSelf.config.BFConfigAPIVersion)\(api)", parameters: parameters)
                 .responseJSON { response in
-                    print("success ")
                     completionHandler(response)
             }
         }

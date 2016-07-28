@@ -33,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOo-sn-Ksg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2628" y="123"/>
+            <point key="canvasLocation" x="2520" y="123"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="0wy-i8-kkY">
@@ -47,7 +47,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JRD-KC-f97">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JRD-KC-f97">
                                 <rect key="frame" x="0.0" y="108" width="600" height="443"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IqY-WC-R6R">
@@ -77,7 +77,7 @@
                                 <color key="backgroundColor" red="0.74754249849999999" green="0.87843266310000001" blue="0.38326831360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Xwx-Yk-5H9" firstAttribute="trailing" secondItem="JRD-KC-f97" secondAttribute="trailing" id="1ju-Eu-rOt"/>
                             <constraint firstItem="JRD-KC-f97" firstAttribute="leading" secondItem="OXR-YE-j7M" secondAttribute="leading" id="9BY-Vz-B8N"/>
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqf-VU-K7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="818"/>
+            <point key="canvasLocation" x="2520" y="784"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M3X-ld-ppJ">
