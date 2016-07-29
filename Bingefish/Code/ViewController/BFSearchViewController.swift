@@ -14,11 +14,23 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBarBackgroundView: UIView!
     
-    let searchController = UISearchController(searchResultsController: nil)
     let BFShowCollectionViewCellReuseIdentifier = "BFShowCollectionViewCellReuseIdentifier"
-    
-    var shows: [BFShow]?
+    let BFSearchViewControllerearchTimeThreshold: NSTimeInterval = 1.5
 
+    let searchController = UISearchController(searchResultsController: nil)
+    let searchOperationQueue = NSOperationQueue()
+
+    var shows: [BFShow]?
+    var previouslySearchedTime = NSDate().timeIntervalSince1970
+    var queuedQueries = [String]()
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        searchOperationQueue.name = "BFSearchViewController.searchOperationQueue"
+        
+        super.init(coder: aDecoder)
+    }
+    
     // MARK: - BFSearchViewController
 
     func searchString(string: String)
@@ -27,17 +39,48 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
             return
         }
         
-        BFApp.sharedInstance.serverController.search(string) { [weak self] (shows, response)  in
-            if let error = response.result.error {
-                dprint("\(error)")
-            }
-            else {
-                self?.shows = shows
-                self?.collectionView?.reloadData()
-                self?.cacheShowsToCoreData()
-                NSUserDefaults.standardUserDefaults().setObject(string, forKey: NSUserDefaultsPreviousSearchedStringKey)
+        // Add search string to array and only do the search when 1.5 seconds have passed to avoid search spamming the server
+        
+        queuedQueries.append(string)
+        
+        let now = NSDate().timeIntervalSince1970
+        let searchableTimeInterval = previouslySearchedTime + BFSearchViewControllerearchTimeThreshold
+
+        if searchableTimeInterval > now {
+            dispatchAfterInDefaultQueue(BFSearchViewControllerearchTimeThreshold, closure: { [weak self] in
+                self?.performSearchQueue()
+            })
+        }
+        else {
+            performSearchQueue()
+        }
+    }
+    
+    func performSearchQueue()
+    {
+        searchOperationQueue.cancelAllOperations()
+        
+        guard let string = queuedQueries.last else {
+            return
+        }
+        
+        let blockOperation = NSBlockOperation { 
+            BFApp.sharedInstance.serverController.search(string) { [weak self] (shows, response)  in
+                if let error = response.result.error {
+                    dprint("\(error)")
+                }
+                else {
+                    self?.previouslySearchedTime = NSDate().timeIntervalSince1970
+                    self?.shows = shows
+                    self?.collectionView?.reloadData()
+                    self?.cacheShowsToCoreData()
+                    NSUserDefaults.standardUserDefaults().setObject(string, forKey: NSUserDefaultsPreviousSearchedStringKey)
+                }
             }
         }
+        
+        searchOperationQueue.addOperation(blockOperation)
+        queuedQueries.removeAll()
     }
     
     func cacheShowsToCoreData()
