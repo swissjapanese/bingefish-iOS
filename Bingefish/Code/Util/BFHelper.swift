@@ -20,3 +20,10 @@ class BFHelper: NSObject
         return UIDevice.currentDevice().userInterfaceIdiom == .Pad
     }
 }
+
+func dprint(string: String)
+{
+    #if DEBUG
+        print(string)
+    #endif
+}

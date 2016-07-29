@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController 
 {
-    func embedInNavigationController(includeDoneButton: Bool) -> UINavigationController
+    func embedInNavigationController(includeDoneButton includeDoneButton: Bool) -> UINavigationController
     {
         let navigationController = UINavigationController(rootViewController: self)
         if includeDoneButton {

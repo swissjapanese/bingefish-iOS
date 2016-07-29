@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class BFSearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchResultsUpdating 
 {
@@ -22,14 +23,61 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     func searchString(string: String)
     {
+        if string.isEmpty {
+            return
+        }
+        
         BFApp.sharedInstance.serverController.search(string) { [weak self] (shows, response)  in
             if let error = response.result.error {
-                print("\(error)")
+                dprint("\(error)")
             }
             else {
                 self?.shows = shows
                 self?.collectionView?.reloadData()
+                self?.cacheShowsToCoreData()
+                NSUserDefaults.standardUserDefaults().setObject(string, forKey: NSUserDefaultsPreviousSearchedStringKey)
             }
+        }
+    }
+    
+    func cacheShowsToCoreData()
+    {
+        guard let shows = shows where shows.count > 0 else {
+            return
+        }
+        
+        for show in shows {
+            show.cacheToCoreData()
+        }
+    }
+    
+    func readShowsFromCoreData()
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "BFShow")
+        
+        do {
+            let results = try managedContext!.executeFetchRequest(fetchRequest)
+            let manageObjectShows = results as! [NSManagedObject]
+            if shows == nil {
+                shows = [BFShow]()
+            }
+            
+            for manageObjectShow in manageObjectShows {
+                if let show = BFShow(manageObject: manageObjectShow) {
+                    shows!.append(show)                    
+                }
+            }
+            
+            if shows!.count > 0 {
+                self.collectionView?.reloadData()
+                searchController.searchBar.text = NSUserDefaults.standardUserDefaults().objectForKey(NSUserDefaultsPreviousSearchedStringKey) as? String
+                searchController.searchBar.becomeFirstResponder()
+            }
+        } 
+        catch let error as NSError {
+            dprint("Could not fetch \(error), \(error.userInfo)")
         }
     }
     
@@ -45,13 +93,8 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchBarBackgroundView.addSubview(searchController.searchBar)
         
         collectionView!.registerNib(UINib(nibName: "BFShowCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: BFShowCollectionViewCellReuseIdentifier)
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) 
-    {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         
+        readShowsFromCoreData()
     }
     
     // MARK: - UICollectionViewController
@@ -102,7 +145,7 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
                 self.navigationController?.pushViewController(showViewController, animated: true)
             }
             else if BFHelper.isIPad() {
-                let navigationController = showViewController.embedInNavigationController(true)
+                let navigationController = showViewController.embedInNavigationController(includeDoneButton: true)
                 navigationController.modalPresentationStyle = .FormSheet
                 self.navigationController?.presentViewController(navigationController, animated: true, completion: nil)
             }
@@ -117,5 +160,4 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
             searchString(text)
         }
     }
-    
 }
