@@ -36,9 +36,8 @@ class BFServerController: NSObject
             var shows = [BFShow]()
             if let json = response.result.value, let array = json as? NSArray {
                 for show in array {
-                    if let show = BFShow(dictionary: show as! [String : AnyObject]) {
-                        shows.append(show)
-                    }
+                    let show = BFShow(dictionary: show as! [String : AnyObject])
+                    shows.append(show)
                 }
             }
                 

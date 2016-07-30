@@ -10,43 +10,25 @@ import CoreData
 import Alamofire
 import Foundation
 
-class BFShow: NSObject 
+class BFShow: NSManagedObject 
 {
-    let tvdbid: String?
-    let seriesName: String?
-    let overview: String?
-    let fanartURLString: String?
-    
-    init?(dictionary: [String: AnyObject])
+    convenience init(dictionary: [String: AnyObject])
     {
-        guard let extractor = EBTExtractor(dictionary: dictionary) else {
-            return nil
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext = appDelegate.managedObjectContext        
+        let entity = NSEntityDescription.entityForName("BFShow", inManagedObjectContext: managedObjectContext!)
+        self.init(entity: entity!, insertIntoManagedObjectContext: managedObjectContext!)
+        
+        if let extractor = EBTExtractor(dictionary: dictionary) {
+            self.tvdbid = extractor.stringForKey("tvdb_id")
+            self.seriesName = extractor.stringForKey("series_name")
+            self.overview = extractor.stringForKey("overview")
+            self.fanartURLString = extractor.stringForKey("fanart")
         }
-                        
-        self.tvdbid = extractor.stringForKey("tvdb_id")
-        self.seriesName = extractor.stringForKey("series_name")
-        self.overview = extractor.stringForKey("overview")
-        self.fanartURLString = extractor.stringForKey("fanart")
-        
-        super.init()
-        
+                
         assert(self.tvdbid != nil, "tvdbid must not be nil")
     }
-    
-    // MARK: Core Data stack
-    
-    init?(manageObject: NSManagedObject)
-    {
-        self.tvdbid = manageObject.valueForKey("tvdbid") as? String
-        self.seriesName = manageObject.valueForKey("seriesName") as? String
-        self.overview = manageObject.valueForKey("overview") as? String
-        self.fanartURLString = manageObject.valueForKey("fanartURLString") as? String
         
-        super.init()
-        
-        assert(self.tvdbid != nil, "tvdbid must not be nil")
-    }
-    
     func cacheToCoreData()
     {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

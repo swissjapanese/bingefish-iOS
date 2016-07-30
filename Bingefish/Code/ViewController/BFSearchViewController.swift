@@ -99,16 +99,16 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "BFShow")
-        
+    
         do {
             let results = try managedContext!.executeFetchRequest(fetchRequest)
             let manageObjectShows = results as! [NSManagedObject]
             if shows == nil {
                 shows = [BFShow]()
             }
-            
+
             for manageObjectShow in manageObjectShows {
-                if let show = BFShow(manageObject: manageObjectShow) {
+                if let show = manageObjectShow as? BFShow {
                     shows!.append(show)                    
                 }
             }

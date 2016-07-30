@@ -18,6 +18,7 @@
 		370F7B5D1D4AEEF50065FC1D /* NSUserDefaults+Bingefish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7B5C1D4AEEF50065FC1D /* NSUserDefaults+Bingefish.swift */; };
 		3755E60C1D4824210057081C /* BingefishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E60B1D4824210057081C /* BingefishTests.swift */; };
 		3755E6171D4824210057081C /* BingefishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E6161D4824210057081C /* BingefishUITests.swift */; };
+		379DC26D1D4D46E200F24031 /* BFShow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */; };
 		37A49A121D484B30006FE686 /* EBTExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A111D484B30006FE686 /* EBTExtractor.m */; };
 		37A49A161D4851DB006FE686 /* BFShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A49A151D4851DB006FE686 /* BFShowCollectionViewCell.xib */; };
 		37A49A191D485228006FE686 /* BFShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A181D485228006FE686 /* BFShowCollectionViewCell.swift */; };
@@ -69,6 +70,7 @@
 		3755E6121D4824210057081C /* BingefishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BingefishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3755E6161D4824210057081C /* BingefishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingefishUITests.swift; sourceTree = "<group>"; };
 		3755E6181D4824210057081C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFShow+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37A49A0F1D484B30006FE686 /* EBTExtractor+DirectObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EBTExtractor+DirectObject.h"; sourceTree = "<group>"; };
 		37A49A101D484B30006FE686 /* EBTExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTExtractor.h; sourceTree = "<group>"; };
 		37A49A111D484B30006FE686 /* EBTExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTExtractor.m; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				37ADD13E1D48404A003E1D2E /* BFShow.swift */,
+				379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379DC26D1D4D46E200F24031 /* BFShow+CoreDataProperties.swift in Sources */,
 				37A49A121D484B30006FE686 /* EBTExtractor.m in Sources */,
 				370F7B081D49C7420065FC1D /* BFHelper.swift in Sources */,
 				37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */,
