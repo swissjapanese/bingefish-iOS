@@ -26,7 +26,7 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     required init?(coder aDecoder: NSCoder)
     {
-        searchOperationQueue.name = "BFSearchViewController.searchOperationQueue"
+        searchOperationQueue.name = "\(NSStringFromClass(self.dynamicType)).searchOperationQueue"
         
         super.init(coder: aDecoder)
     }
@@ -39,7 +39,7 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
             return
         }
         
-        // Add search string to array and only do the search when 1.5 seconds have passed to avoid search spamming the server
+        // Add search string to array and only do the search when BFSearchViewControllerearchTimeThreshold seconds have passed to avoid search spamming the server
         
         queuedQueries.append(string)
         
@@ -65,16 +65,18 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
         
         let blockOperation = NSBlockOperation { 
-            BFApp.sharedInstance.serverController.search(string) { [weak self] (shows, response)  in
+            BFNetworkController.sharedController.search(string) { [weak self] (shows, response)  in
                 if let error = response.result.error {
                     dprint("\(error)")
                 }
                 else {
-                    self?.previouslySearchedTime = NSDate().timeIntervalSince1970
-                    self?.shows = shows
-                    self?.collectionView?.reloadData()
-                    self?.cacheShowsToCoreData()
-                    NSUserDefaults.standardUserDefaults().setObject(string, forKey: NSUserDefaultsPreviousSearchedStringKey)
+                    if let strongSelf = self {
+                        strongSelf.previouslySearchedTime = NSDate().timeIntervalSince1970
+                        strongSelf.shows = shows
+                        strongSelf.collectionView?.reloadData()
+                        strongSelf.cacheShowsToCoreData()
+                        NSUserDefaults.standardUserDefaults().setObject(string, forKey: NSUserDefaultsPreviousSearchedStringKey)
+                    }
                 }
             }
         }

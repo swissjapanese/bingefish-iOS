@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
         self.window!.tintColor = UIColor.bf_tintColor()
 
-        BFApp.sharedInstance.setUp()
-        
         return true
     }
 

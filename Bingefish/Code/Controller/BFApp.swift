@@ -11,11 +11,4 @@ import UIKit
 class BFApp: NSObject
 {
     static let sharedInstance = BFApp()
-    let serverController = BFServerController()
-    
-    func setUp()
-    {
-        // For USA, use main BFConfig
-        serverController.config = BFConfig()
-    }
 }

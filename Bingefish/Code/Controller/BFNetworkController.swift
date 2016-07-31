@@ -1,5 +1,5 @@
 //
-//  BFServerController.swift
+//  BFNetworkController.swift
 //  Bingefish
 //
 //  Created by Genki Mine on 7/26/16.
@@ -9,8 +9,10 @@
 import UIKit
 import Alamofire
 
-class BFServerController: NSObject 
+class BFNetworkController: NSObject 
 {
+    static let sharedController = BFNetworkController()
+    
     var config: BFConfig!
     var operationQueue = NSOperationQueue()
         
@@ -18,8 +20,11 @@ class BFServerController: NSObject
     
     override init()
     {
-        operationQueue.name = "BFServerController.operationQueue"
+        operationQueue.name = "\(NSStringFromClass(self.dynamicType)).operationQueue"
         operationQueue.maxConcurrentOperationCount = 5
+        
+        // For USA, use main BFConfig
+        config = BFConfig()
     }
     
     // MARK: APIs

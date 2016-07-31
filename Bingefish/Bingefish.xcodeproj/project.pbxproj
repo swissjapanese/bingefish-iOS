@@ -29,7 +29,7 @@
 		37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF31D482AFA000DD4C2 /* AppDelegate.swift */; };
 		37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */; };
 		37D09AF91D482AFA000DD4C2 /* BFSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF61D482AFA000DD4C2 /* BFSearchViewController.swift */; };
-		37D09B031D482CAE000DD4C2 /* BFServerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B021D482CAE000DD4C2 /* BFServerController.swift */; };
+		37D09B031D482CAE000DD4C2 /* BFNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B021D482CAE000DD4C2 /* BFNetworkController.swift */; };
 		37D09B051D482CBE000DD4C2 /* BFApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B041D482CBE000DD4C2 /* BFApp.swift */; };
 		37D09B081D482F25000DD4C2 /* BFConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09B071D482F25000DD4C2 /* BFConfig.swift */; };
 		A6E08D568DA7083A6F80891C /* Pods_BingefishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0FD54A15D9B806C241CEFC /* Pods_BingefishTests.framework */; };
@@ -85,7 +85,7 @@
 		37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFFeedViewController.swift; sourceTree = "<group>"; };
 		37D09AF61D482AFA000DD4C2 /* BFSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFSearchViewController.swift; sourceTree = "<group>"; };
 		37D09AFF1D482B4B000DD4C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37D09B021D482CAE000DD4C2 /* BFServerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFServerController.swift; sourceTree = "<group>"; };
+		37D09B021D482CAE000DD4C2 /* BFNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFNetworkController.swift; sourceTree = "<group>"; };
 		37D09B041D482CBE000DD4C2 /* BFApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFApp.swift; sourceTree = "<group>"; };
 		37D09B071D482F25000DD4C2 /* BFConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFConfig.swift; sourceTree = "<group>"; };
 		37D09B091D483204000DD4C2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		37D09B011D482C4D000DD4C2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				37D09B021D482CAE000DD4C2 /* BFServerController.swift */,
+				37D09B021D482CAE000DD4C2 /* BFNetworkController.swift */,
 				37D09B041D482CBE000DD4C2 /* BFApp.swift */,
 			);
 			path = Controller;
@@ -612,7 +612,7 @@
 				370F7B081D49C7420065FC1D /* BFHelper.swift in Sources */,
 				37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */,
 				37D09AF91D482AFA000DD4C2 /* BFSearchViewController.swift in Sources */,
-				37D09B031D482CAE000DD4C2 /* BFServerController.swift in Sources */,
+				37D09B031D482CAE000DD4C2 /* BFNetworkController.swift in Sources */,
 				37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */,
 				37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */,
 				370F7B061D49C6FE0065FC1D /* String+Bingefish.swift in Sources */,
