@@ -12,6 +12,6 @@ extension UIColor
 {
     class func bf_tintColor() -> UIColor
     {
-        return UIColor(red: 0.0/255.0, green: 207.0/255.0, blue: 157.0/255.0, alpha: 1.0)
+        return UIColor(red: 0.0/255.0, green: 195.0/255.0, blue: 177.0/255.0, alpha: 1.0)
     }
 }

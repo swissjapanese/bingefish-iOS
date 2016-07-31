@@ -50,6 +50,22 @@ class BFNetworkController: NSObject
         }
     }
     
+    func signUp(emailAddress: String, password: String, completionHandler: (user: BFUser?, response: Response<AnyObject, NSError>?) -> Void)
+    {
+        // Fake user until we have API
+        let user = BFUser()
+        user.emailAddress = emailAddress
+        completionHandler(user: user, response: nil)
+    }
+    
+    func signIn(emailAddress: String, password: String, completionHandler: (user: BFUser?, response: Response<AnyObject, NSError>?) -> Void)
+    {
+        // Fake user until we have API
+        let user = BFUser()
+        user.emailAddress = emailAddress
+        completionHandler(user: user, response: nil)
+    }
+    
     // MARK: Private
     
     private func request(method: Alamofire.Method, api: String!, parameters: [String: String], completionHandler: Response<AnyObject, NSError> -> Void)

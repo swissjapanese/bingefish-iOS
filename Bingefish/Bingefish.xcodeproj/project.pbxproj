@@ -19,6 +19,14 @@
 		3755E60C1D4824210057081C /* BingefishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E60B1D4824210057081C /* BingefishTests.swift */; };
 		3755E6171D4824210057081C /* BingefishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E6161D4824210057081C /* BingefishUITests.swift */; };
 		379DC26D1D4D46E200F24031 /* BFShow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */; };
+		379DC2711D4E67DF00F24031 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2701D4E67DF00F24031 /* KeychainWrapper.m */; };
+		379DC2731D4E682800F24031 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379DC2721D4E682800F24031 /* Auth.storyboard */; };
+		379DC2751D4E6BBF00F24031 /* BFSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2741D4E6BBF00F24031 /* BFSignUpViewController.swift */; };
+		379DC2771D4E6BCE00F24031 /* BFLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2761D4E6BCE00F24031 /* BFLogInViewController.swift */; };
+		379DC2791D4E6EE000F24031 /* BFUserAuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2781D4E6EE000F24031 /* BFUserAuthenticationController.swift */; };
+		379DC27B1D4E6F7B00F24031 /* BFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC27A1D4E6F7B00F24031 /* BFUser.swift */; };
+		379DC27D1D4E8EA800F24031 /* BFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC27C1D4E8EA800F24031 /* BFSettingsViewController.swift */; };
+		379DC28A1D4E940600F24031 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 379DC2881D4E940600F24031 /* Localizable.strings */; };
 		37A49A121D484B30006FE686 /* EBTExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A111D484B30006FE686 /* EBTExtractor.m */; };
 		37A49A161D4851DB006FE686 /* BFShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A49A151D4851DB006FE686 /* BFShowCollectionViewCell.xib */; };
 		37A49A191D485228006FE686 /* BFShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A181D485228006FE686 /* BFShowCollectionViewCell.swift */; };
@@ -71,6 +79,15 @@
 		3755E6161D4824210057081C /* BingefishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingefishUITests.swift; sourceTree = "<group>"; };
 		3755E6181D4824210057081C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFShow+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		379DC26F1D4E67DF00F24031 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		379DC2701D4E67DF00F24031 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		379DC2721D4E682800F24031 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		379DC2741D4E6BBF00F24031 /* BFSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFSignUpViewController.swift; sourceTree = "<group>"; };
+		379DC2761D4E6BCE00F24031 /* BFLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFLogInViewController.swift; sourceTree = "<group>"; };
+		379DC2781D4E6EE000F24031 /* BFUserAuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFUserAuthenticationController.swift; sourceTree = "<group>"; };
+		379DC27A1D4E6F7B00F24031 /* BFUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFUser.swift; sourceTree = "<group>"; };
+		379DC27C1D4E8EA800F24031 /* BFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFSettingsViewController.swift; sourceTree = "<group>"; };
+		379DC2891D4E940600F24031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		37A49A0F1D484B30006FE686 /* EBTExtractor+DirectObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EBTExtractor+DirectObject.h"; sourceTree = "<group>"; };
 		37A49A101D484B30006FE686 /* EBTExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTExtractor.h; sourceTree = "<group>"; };
 		37A49A111D484B30006FE686 /* EBTExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTExtractor.m; sourceTree = "<group>"; };
@@ -165,6 +182,7 @@
 				F44D9ABF50BD594B7B34F046 /* Frameworks */,
 				37D09AFF1D482B4B000DD4C2 /* Info.plist */,
 				37A49A0D1D484B30006FE686 /* Libraries */,
+				379DC27E1D4E92E600F24031 /* Localizable */,
 				930D9805A346142FBD6248E9 /* Pods */,
 				3755E5F21D4824210057081C /* Products */,
 				37D09AFA1D482B10000DD4C2 /* Storyboards */,
@@ -200,10 +218,36 @@
 			path = BingefishUITests;
 			sourceTree = "<group>";
 		};
+		379DC26E1D4E67DF00F24031 /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				379DC26F1D4E67DF00F24031 /* KeychainWrapper.h */,
+				379DC2701D4E67DF00F24031 /* KeychainWrapper.m */,
+			);
+			path = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+		379DC27E1D4E92E600F24031 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				379DC2871D4E940600F24031 /* Base.lproj */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		379DC2871D4E940600F24031 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				379DC2881D4E940600F24031 /* Localizable.strings */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		37A49A0D1D484B30006FE686 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
 				37A49A0E1D484B30006FE686 /* EBTExtractor */,
+				379DC26E1D4E67DF00F24031 /* KeychainWrapper */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -239,6 +283,7 @@
 			children = (
 				37ADD13E1D48404A003E1D2E /* BFShow.swift */,
 				379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */,
+				379DC27A1D4E6F7B00F24031 /* BFUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,8 +307,11 @@
 			isa = PBXGroup;
 			children = (
 				37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */,
+				379DC2761D4E6BCE00F24031 /* BFLogInViewController.swift */,
 				37D09AF61D482AFA000DD4C2 /* BFSearchViewController.swift */,
+				379DC27C1D4E8EA800F24031 /* BFSettingsViewController.swift */,
 				370F7AFF1D49C1310065FC1D /* BFShowViewController.swift */,
+				379DC2741D4E6BBF00F24031 /* BFSignUpViewController.swift */,
 				370F7B0B1D49CF020065FC1D /* BFViewController.swift */,
 			);
 			path = ViewController;
@@ -272,6 +320,7 @@
 		37D09AFA1D482B10000DD4C2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				379DC2721D4E682800F24031 /* Auth.storyboard */,
 				37ADD1391D4834B5003E1D2E /* Main.storyboard */,
 				37ADD13B1D483537003E1D2E /* LaunchScreen.storyboard */,
 				370F7B011D49C6380065FC1D /* Show.storyboard */,
@@ -284,6 +333,7 @@
 			children = (
 				37D09B021D482CAE000DD4C2 /* BFNetworkController.swift */,
 				37D09B041D482CBE000DD4C2 /* BFApp.swift */,
+				379DC2781D4E6EE000F24031 /* BFUserAuthenticationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -444,6 +494,8 @@
 			files = (
 				37A49A161D4851DB006FE686 /* BFShowCollectionViewCell.xib in Resources */,
 				37ADD13C1D483537003E1D2E /* LaunchScreen.storyboard in Resources */,
+				379DC2731D4E682800F24031 /* Auth.storyboard in Resources */,
+				379DC28A1D4E940600F24031 /* Localizable.strings in Resources */,
 				370F7B021D49C6380065FC1D /* Show.storyboard in Resources */,
 				37D09AF11D482AED000DD4C2 /* Assets.xcassets in Resources */,
 				37ADD13A1D4834B5003E1D2E /* Main.storyboard in Resources */,
@@ -613,14 +665,20 @@
 				37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */,
 				37D09AF91D482AFA000DD4C2 /* BFSearchViewController.swift in Sources */,
 				37D09B031D482CAE000DD4C2 /* BFNetworkController.swift in Sources */,
+				379DC2771D4E6BCE00F24031 /* BFLogInViewController.swift in Sources */,
 				37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */,
 				37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */,
+				379DC2751D4E6BBF00F24031 /* BFSignUpViewController.swift in Sources */,
 				370F7B061D49C6FE0065FC1D /* String+Bingefish.swift in Sources */,
+				379DC2711D4E67DF00F24031 /* KeychainWrapper.m in Sources */,
 				37D09B051D482CBE000DD4C2 /* BFApp.swift in Sources */,
 				370F7B001D49C1310065FC1D /* BFShowViewController.swift in Sources */,
 				37A49A191D485228006FE686 /* BFShowCollectionViewCell.swift in Sources */,
 				370F7B5D1D4AEEF50065FC1D /* NSUserDefaults+Bingefish.swift in Sources */,
+				379DC2791D4E6EE000F24031 /* BFUserAuthenticationController.swift in Sources */,
 				37D09B081D482F25000DD4C2 /* BFConfig.swift in Sources */,
+				379DC27D1D4E8EA800F24031 /* BFSettingsViewController.swift in Sources */,
+				379DC27B1D4E6F7B00F24031 /* BFUser.swift in Sources */,
 				370F7B0C1D49CF030065FC1D /* BFViewController.swift in Sources */,
 				370F7B0A1D49CD5A0065FC1D /* UIColor+Bingefish.swift in Sources */,
 				370F7B5B1D4AE4000065FC1D /* Bingefish.xcdatamodeld in Sources */,
@@ -657,6 +715,17 @@
 			targetProxy = 3755E6131D4824210057081C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		379DC2881D4E940600F24031 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				379DC2891D4E940600F24031 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3755E6191D4824210057081C /* Debug */ = {

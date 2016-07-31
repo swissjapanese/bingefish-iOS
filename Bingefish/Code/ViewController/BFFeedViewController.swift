@@ -9,22 +9,10 @@
 import UIKit
 import Crashlytics
 
-class BFFeedViewController: UIViewController 
+class BFFeedViewController: BFViewController 
 {
-    override func viewDidLoad() 
-    {
-        super.viewDidLoad()
-    }
-    
     override func viewDidAppear(animated: Bool) 
     {
         super.viewDidAppear(animated)
-        
-        CLSLogv("\(self.dynamicType) \(#function):\(#line)", getVaList([]))
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
     }
 }

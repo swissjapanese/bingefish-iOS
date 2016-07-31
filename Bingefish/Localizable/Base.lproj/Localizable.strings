@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Bingefish
+
+  Created by Genki Mine on 7/31/16.
+  Copyright © 2016 Bingefish. All rights reserved.
+*/
+
+"SIGN_UP" = "Sign up";
+"WELCOME_TO_BINGEFISH" = "Welcome to Bingefish.";
+"SIGN_UP_WITH_FACEBOOK" = "Sign up with Facebook";
+"OR" = "or";
+"ALREADY_HAVE_ACCOUNT" = "Already have an account?";
+"LOG_IN" = "Log in";
+"LOG_OUT" = "Log out";
+"EMAIL_ADDRESS" = "Email address";
+"PASSWORD" = "Password";
+"FORGOT_PASSWORD" = "Forgot password";

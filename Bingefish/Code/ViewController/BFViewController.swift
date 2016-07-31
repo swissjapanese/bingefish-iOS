@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import Crashlytics
 
-extension UIViewController 
+class BFViewController: UIViewController 
 {
+    override func viewDidAppear(animated: Bool) 
+    {
+        super.viewDidAppear(animated)
+
+        CLSLogv("\(self.dynamicType) \(#function):\(#line)", getVaList([]))
+    }
+    
     func embedInNavigationController(includeDoneButton includeDoneButton: Bool) -> UINavigationController
     {
         let navigationController = UINavigationController(rootViewController: self)

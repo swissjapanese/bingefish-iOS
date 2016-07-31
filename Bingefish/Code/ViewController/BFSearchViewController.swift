@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import Crashlytics
 
-class BFSearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchResultsUpdating 
+class BFSearchViewController: BFViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchResultsUpdating 
 {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBarBackgroundView: UIView!
@@ -48,7 +48,7 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
         let searchableTimeInterval = previouslySearchedTime + BFSearchViewControllerearchTimeThreshold
 
         if searchableTimeInterval > now {
-            dispatchAfterInDefaultQueue(BFSearchViewControllerearchTimeThreshold, closure: { [weak self] in
+            BFHelper.dispatchAfterInDefaultQueue(BFSearchViewControllerearchTimeThreshold, closure: { [weak self] in
                 self?.performSearchQueue()
             })
         }
@@ -141,13 +141,6 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView!.registerNib(UINib(nibName: "BFShowCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: BFShowCollectionViewCellReuseIdentifier)
         
         readShowsFromCoreData()
-    }
-    
-    override func viewDidAppear(animated: Bool) 
-    {
-        super.viewDidAppear(animated)
-        
-        CLSLogv("\(self.dynamicType) \(#function):\(#line)", getVaList([]))
     }
     
     // MARK: - UICollectionViewController
