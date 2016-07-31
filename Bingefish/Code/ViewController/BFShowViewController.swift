@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 class BFShowViewController: UIViewController 
 {
@@ -30,6 +31,13 @@ class BFShowViewController: UIViewController
             mainImageView.af_setImageWithURL(URL, placeholderImage: UIImage(), filter: nil, imageTransition: .CrossDissolve(0.2))
             overviewLabel.text = show.overview
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) 
+    {
+        super.viewDidAppear(animated)
+        
+        CLSLogv("\(self.dynamicType) \(#function):\(#line)", getVaList([]))
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) 

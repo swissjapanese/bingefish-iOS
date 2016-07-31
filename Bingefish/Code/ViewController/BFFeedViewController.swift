@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import Crashlytics
 
 class BFFeedViewController: UIViewController 
 {
     override func viewDidLoad() 
     {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) 
+    {
+        super.viewDidAppear(animated)
+        
+        CLSLogv("\(self.dynamicType) \(#function):\(#line)", getVaList([]))
     }
 
     override func didReceiveMemoryWarning()

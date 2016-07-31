@@ -156,12 +156,12 @@
 		3755E5E81D4824210057081C = {
 			isa = PBXGroup;
 			children = (
-				370F7B4C1D4AD8980065FC1D /* CoreData */,
 				37D09AF01D482AED000DD4C2 /* Assets.xcassets */,
 				37A49A131D484BFF006FE686 /* Bingefish-Bridging-Header.h */,
 				3755E60A1D4824210057081C /* BingefishTests */,
 				3755E6151D4824210057081C /* BingefishUITests */,
 				37D09AF21D482AFA000DD4C2 /* Code */,
+				370F7B4C1D4AD8980065FC1D /* CoreData */,
 				F44D9ABF50BD594B7B34F046 /* Frameworks */,
 				37D09AFF1D482B4B000DD4C2 /* Info.plist */,
 				37A49A0D1D484B30006FE686 /* Libraries */,

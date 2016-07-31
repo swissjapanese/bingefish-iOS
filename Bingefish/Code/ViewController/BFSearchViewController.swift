@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Crashlytics
 
 class BFSearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchResultsUpdating 
 {
@@ -142,14 +143,14 @@ class BFSearchViewController: UIViewController, UICollectionViewDelegate, UIColl
         readShowsFromCoreData()
     }
     
-    // MARK: - UICollectionViewController
-    
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
+    override func viewDidAppear(animated: Bool) 
     {
-        let view = UICollectionReusableView()
-        view.addSubview(searchController.searchBar)
-        return view
+        super.viewDidAppear(animated)
+        
+        CLSLogv("\(self.dynamicType) \(#function):\(#line)", getVaList([]))
     }
+    
+    // MARK: - UICollectionViewController
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int 
     {
