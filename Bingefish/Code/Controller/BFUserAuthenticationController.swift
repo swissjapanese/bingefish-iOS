@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import SAMKeychain
 
 class BFUserAuthenticationController: NSObject 
 {
     static let sharedController = BFUserAuthenticationController()
     
     let BFUserAuthenticationControllerKeychainEmailAddress = "BFUserAuthenticationControllerKeychainEmailAddress"
+    let BFUserAuthenticationControllerServiceEmailAddress = "BFUserAuthenticationControllerServiceEmailAddress"
     
-    private let keychainWrapper = KeychainWrapper()
+    private let keychain = SAMKeychain()
     var user: BFUser?
     
     override init()
@@ -93,9 +95,8 @@ class BFUserAuthenticationController: NSObject
     
     func logOut()
     {
-        self.user = nil
-        keychainWrapper.mySetObject("", forKey: kSecAttrAccount)
-        keychainWrapper.writeToKeychain()
+        SAMKeychain.deletePasswordForService(user?.emailAddress, account: account())
+        user = nil
     }
     
     func isAuthenticated() -> Bool
@@ -106,26 +107,21 @@ class BFUserAuthenticationController: NSObject
     private func userDidLogIn(user: BFUser)
     {
         self.user = user
-        setEmailAddress(user.emailAddress)
-    }
-    
-    private func setEmailAddress(emailAddress: String)
-    {
-        keychainWrapper.mySetObject(emailAddress, forKey:kSecAttrAccount)
-        keychainWrapper.writeToKeychain()
+        
+        SAMKeychain.setPassword(user.emailAddress, forService: BFUserAuthenticationControllerServiceEmailAddress, account: account())
     }
     
     private func emailAddress() -> String?
     {
-        if let emailAddress = keychainWrapper.myObjectForKey(kSecAttrAccount) as? String {
-            if emailAddress == "Account" { // Somehow, instead of nil, I get "Account" for default value
-                return nil
-            }
-            else {
-                return emailAddress
-            }
+        if let emailAddress = SAMKeychain.passwordForService(BFUserAuthenticationControllerServiceEmailAddress, account: account()) {
+            return emailAddress
         }
         
         return nil
+    }
+    
+    private func account() -> String
+    {
+        return "DefaultAccount"
     }
 }

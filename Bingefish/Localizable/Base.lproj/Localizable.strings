@@ -16,3 +16,6 @@
 "EMAIL_ADDRESS" = "Email address";
 "PASSWORD" = "Password";
 "FORGOT_PASSWORD" = "Forgot password";
+"OOPS" = "Oops!";
+"ENTER_VALID_EMAIL" = "Please enter a valid email address.";
+"OK" = "OK";

@@ -65,7 +65,10 @@ class BFSignUpViewController: BFViewController
                 BFUserAuthenticationController.sharedController.signUp(emailAddress, password: "", viewController: self, completion: completion)                
             }
             else {
-                
+                let alertController = UIAlertController(title: NSLocalizedString("OOPS", comment: ""), message: NSLocalizedString("ENTER_VALID_EMAIL", comment: ""), preferredStyle: .Alert)
+                let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .Default, handler: nil)
+                alertController.addAction(okAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
             }
         }
     }

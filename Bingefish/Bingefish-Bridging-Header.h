@@ -10,6 +10,5 @@
 #define Bingefish_Bridging_Header_h
 
 #import "EBTExtractor.h"
-#import "KeychainWrapper.h"
 
 #endif /* Bingefish_Bridging_Header_h */

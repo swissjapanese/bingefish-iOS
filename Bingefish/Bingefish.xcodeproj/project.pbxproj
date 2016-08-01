@@ -19,7 +19,6 @@
 		3755E60C1D4824210057081C /* BingefishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E60B1D4824210057081C /* BingefishTests.swift */; };
 		3755E6171D4824210057081C /* BingefishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E6161D4824210057081C /* BingefishUITests.swift */; };
 		379DC26D1D4D46E200F24031 /* BFShow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */; };
-		379DC2711D4E67DF00F24031 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2701D4E67DF00F24031 /* KeychainWrapper.m */; };
 		379DC2731D4E682800F24031 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379DC2721D4E682800F24031 /* Auth.storyboard */; };
 		379DC2751D4E6BBF00F24031 /* BFSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2741D4E6BBF00F24031 /* BFSignUpViewController.swift */; };
 		379DC2771D4E6BCE00F24031 /* BFLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2761D4E6BCE00F24031 /* BFLogInViewController.swift */; };
@@ -79,8 +78,6 @@
 		3755E6161D4824210057081C /* BingefishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingefishUITests.swift; sourceTree = "<group>"; };
 		3755E6181D4824210057081C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFShow+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		379DC26F1D4E67DF00F24031 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
-		379DC2701D4E67DF00F24031 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		379DC2721D4E682800F24031 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		379DC2741D4E6BBF00F24031 /* BFSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFSignUpViewController.swift; sourceTree = "<group>"; };
 		379DC2761D4E6BCE00F24031 /* BFLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFLogInViewController.swift; sourceTree = "<group>"; };
@@ -218,15 +215,6 @@
 			path = BingefishUITests;
 			sourceTree = "<group>";
 		};
-		379DC26E1D4E67DF00F24031 /* KeychainWrapper */ = {
-			isa = PBXGroup;
-			children = (
-				379DC26F1D4E67DF00F24031 /* KeychainWrapper.h */,
-				379DC2701D4E67DF00F24031 /* KeychainWrapper.m */,
-			);
-			path = KeychainWrapper;
-			sourceTree = "<group>";
-		};
 		379DC27E1D4E92E600F24031 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				37A49A0E1D484B30006FE686 /* EBTExtractor */,
-				379DC26E1D4E67DF00F24031 /* KeychainWrapper */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -670,7 +657,6 @@
 				37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */,
 				379DC2751D4E6BBF00F24031 /* BFSignUpViewController.swift in Sources */,
 				370F7B061D49C6FE0065FC1D /* String+Bingefish.swift in Sources */,
-				379DC2711D4E67DF00F24031 /* KeychainWrapper.m in Sources */,
 				37D09B051D482CBE000DD4C2 /* BFApp.swift in Sources */,
 				370F7B001D49C1310065FC1D /* BFShowViewController.swift in Sources */,
 				37A49A191D485228006FE686 /* BFShowCollectionViewCell.swift in Sources */,
