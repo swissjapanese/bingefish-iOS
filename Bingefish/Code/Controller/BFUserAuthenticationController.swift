@@ -95,7 +95,7 @@ class BFUserAuthenticationController: NSObject
     
     func logOut()
     {
-        SAMKeychain.deletePasswordForService(user?.emailAddress, account: account())
+        SAMKeychain.deletePasswordForService(BFUserAuthenticationControllerServiceEmailAddress, account: account())
         user = nil
     }
     

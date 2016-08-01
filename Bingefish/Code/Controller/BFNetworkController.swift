@@ -74,6 +74,8 @@ class BFNetworkController: NSObject
             guard let strongSelf = self else {
                 return 
             }
+            
+            dprint("\(method) \(api)")
 
             Alamofire.request(method, "\(strongSelf.config.BFConfigMainURL)\(strongSelf.config.BFConfigAPIVersion)\(api)", parameters: parameters)
                 .responseJSON { response in
