@@ -11,7 +11,7 @@ import CoreData
 
 extension BFShow
 {
-    @NSManaged var tvdbid: String?
+    @NSManaged var showID: String?
     @NSManaged var seriesName: String?
     @NSManaged var overview: String?
     @NSManaged var fanartURLString: String?

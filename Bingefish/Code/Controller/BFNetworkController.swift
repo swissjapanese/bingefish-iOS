@@ -66,18 +66,37 @@ class BFNetworkController: NSObject
         completionHandler(user: user, response: nil)
     }
     
+    func fetchShowDetail(id: String, completionHandler: (showDetail: BFShowDetail?, response: Response<AnyObject, NSError>) -> Void)
+    {
+        let api = "shows/\(id)"
+        request(.GET, api: api, parameters: nil) { [weak self] response in
+            guard let _ = self else {
+                return 
+            }
+            
+            var showDetail: BFShowDetail?
+            
+            if let json = response.result.value, let dictionary = json as? [String : AnyObject] {
+                showDetail = BFShowDetail(dictionary: dictionary)
+            }
+            
+            completionHandler(showDetail: showDetail, response: response)
+        }
+    }
+    
     // MARK: Private
     
-    private func request(method: Alamofire.Method, api: String!, parameters: [String: String], completionHandler: Response<AnyObject, NSError> -> Void)
+    private func request(method: Alamofire.Method, api: String!, parameters: [String: String]?, completionHandler: Response<AnyObject, NSError> -> Void)
     {
         let blockOperation = NSBlockOperation { [weak self] in
             guard let strongSelf = self else {
                 return 
             }
             
-            dprint("\(method) \(api)")
+            let baseURL = "\(strongSelf.config.BFConfigMainURL)\(strongSelf.config.BFConfigAPIVersion)"
+            dprint("\(method) \(baseURL)\(api)")
 
-            Alamofire.request(method, "\(strongSelf.config.BFConfigMainURL)\(strongSelf.config.BFConfigAPIVersion)\(api)", parameters: parameters)
+            Alamofire.request(method, "\(baseURL)\(api)", parameters: parameters)
                 .responseJSON { response in
                     completionHandler(response)
             }

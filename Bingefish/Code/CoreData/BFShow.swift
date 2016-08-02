@@ -20,13 +20,13 @@ class BFShow: NSManagedObject
         self.init(entity: entity!, insertIntoManagedObjectContext: managedObjectContext!)
         
         if let extractor = EBTExtractor(dictionary: dictionary) {
-            self.tvdbid = extractor.stringForKey("tvdb_id")
+            self.showID = extractor.stringForKey("tvdb_id")
             self.seriesName = extractor.stringForKey("series_name")
             self.overview = extractor.stringForKey("overview")
             self.fanartURLString = extractor.stringForKey("fanart")
         }
                 
-        assert(self.tvdbid != nil, "tvdbid must not be nil")
+        assert(self.showID != nil, "showID must not be nil")
     }
         
     func cacheToCoreData()
@@ -38,7 +38,7 @@ class BFShow: NSManagedObject
         
         if let entity = NSEntityDescription.entityForName("BFShow", inManagedObjectContext: managedContext) {
             let showManageObject = NSManagedObject(entity: entity, insertIntoManagedObjectContext: managedContext)
-            showManageObject.setValue(tvdbid, forKey: "tvdbid")
+            showManageObject.setValue(showID, forKey: "showID")
             showManageObject.setValue(seriesName, forKey: "seriesName")
             showManageObject.setValue(overview, forKey: "overview")
             showManageObject.setValue(fanartURLString, forKey: "fanartURLString")

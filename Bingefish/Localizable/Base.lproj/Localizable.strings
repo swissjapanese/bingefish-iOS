@@ -19,3 +19,5 @@
 "OOPS" = "Oops!";
 "ENTER_VALID_EMAIL" = "Please enter a valid email address.";
 "OK" = "OK";
+"NUMBER_SEASONS" = "%@ Seasons";
+"NUMBER_EPISODES" = "%@ Episodes";

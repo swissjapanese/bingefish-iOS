@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		1122827757C05CA9A03747BC /* Pods_BingefishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147B7D6BED5FD42721A3BC01 /* Pods_BingefishUITests.framework */; };
+		37046B891D505BCE00A96071 /* BFShow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37046B851D505BCE00A96071 /* BFShow+CoreDataProperties.swift */; };
+		37046B8A1D505BCE00A96071 /* BFShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37046B861D505BCE00A96071 /* BFShow.swift */; };
+		37046B8B1D505BCE00A96071 /* Bingefish.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37046B871D505BCE00A96071 /* Bingefish.xcdatamodeld */; };
+		37046B8F1D5060BC00A96071 /* BFShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37046B8D1D5060BC00A96071 /* BFShowCollectionViewCell.swift */; };
+		37046B911D5060E400A96071 /* BFShowHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37046B901D5060E400A96071 /* BFShowHeaderTableViewCell.swift */; };
 		370F7B001D49C1310065FC1D /* BFShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7AFF1D49C1310065FC1D /* BFShowViewController.swift */; };
 		370F7B021D49C6380065FC1D /* Show.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370F7B011D49C6380065FC1D /* Show.storyboard */; };
 		370F7B061D49C6FE0065FC1D /* String+Bingefish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7B051D49C6FE0065FC1D /* String+Bingefish.swift */; };
 		370F7B081D49C7420065FC1D /* BFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7B071D49C7420065FC1D /* BFHelper.swift */; };
 		370F7B0A1D49CD5A0065FC1D /* UIColor+Bingefish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7B091D49CD5A0065FC1D /* UIColor+Bingefish.swift */; };
 		370F7B0C1D49CF030065FC1D /* BFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7B0B1D49CF020065FC1D /* BFViewController.swift */; };
-		370F7B5B1D4AE4000065FC1D /* Bingefish.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 370F7B591D4AE4000065FC1D /* Bingefish.xcdatamodeld */; };
 		370F7B5D1D4AEEF50065FC1D /* NSUserDefaults+Bingefish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7B5C1D4AEEF50065FC1D /* NSUserDefaults+Bingefish.swift */; };
 		3755E60C1D4824210057081C /* BingefishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E60B1D4824210057081C /* BingefishTests.swift */; };
 		3755E6171D4824210057081C /* BingefishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755E6161D4824210057081C /* BingefishUITests.swift */; };
-		379DC26D1D4D46E200F24031 /* BFShow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */; };
+		378FF8B11D50515A0039DB31 /* BFShowDetailImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FF8A71D50515A0039DB31 /* BFShowDetailImages.swift */; };
+		378FF8B31D50515A0039DB31 /* BFActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FF8A91D50515A0039DB31 /* BFActor.swift */; };
+		378FF8B51D50515A0039DB31 /* BFSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FF8AB1D50515A0039DB31 /* BFSeason.swift */; };
+		378FF8B71D50515A0039DB31 /* BFEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FF8AD1D50515A0039DB31 /* BFEpisode.swift */; };
+		378FF8B91D50515A0039DB31 /* BFShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FF8AF1D50515A0039DB31 /* BFShowDetail.swift */; };
 		379DC2731D4E682800F24031 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379DC2721D4E682800F24031 /* Auth.storyboard */; };
 		379DC2751D4E6BBF00F24031 /* BFSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2741D4E6BBF00F24031 /* BFSignUpViewController.swift */; };
 		379DC2771D4E6BCE00F24031 /* BFLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DC2761D4E6BCE00F24031 /* BFLogInViewController.swift */; };
@@ -28,10 +36,8 @@
 		379DC28A1D4E940600F24031 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 379DC2881D4E940600F24031 /* Localizable.strings */; };
 		37A49A121D484B30006FE686 /* EBTExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A111D484B30006FE686 /* EBTExtractor.m */; };
 		37A49A161D4851DB006FE686 /* BFShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A49A151D4851DB006FE686 /* BFShowCollectionViewCell.xib */; };
-		37A49A191D485228006FE686 /* BFShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A49A181D485228006FE686 /* BFShowCollectionViewCell.swift */; };
 		37ADD13A1D4834B5003E1D2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ADD1391D4834B5003E1D2E /* Main.storyboard */; };
 		37ADD13C1D483537003E1D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ADD13B1D483537003E1D2E /* LaunchScreen.storyboard */; };
-		37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADD13E1D48404A003E1D2E /* BFShow.swift */; };
 		37D09AF11D482AED000DD4C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D09AF01D482AED000DD4C2 /* Assets.xcassets */; };
 		37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF31D482AFA000DD4C2 /* AppDelegate.swift */; };
 		37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */; };
@@ -62,13 +68,17 @@
 
 /* Begin PBXFileReference section */
 		147B7D6BED5FD42721A3BC01 /* Pods_BingefishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingefishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37046B851D505BCE00A96071 /* BFShow+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFShow+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		37046B861D505BCE00A96071 /* BFShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShow.swift; sourceTree = "<group>"; };
+		37046B881D505BCE00A96071 /* Bingefish.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bingefish.xcdatamodel; sourceTree = "<group>"; };
+		37046B8D1D5060BC00A96071 /* BFShowCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowCollectionViewCell.swift; sourceTree = "<group>"; };
+		37046B901D5060E400A96071 /* BFShowHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		370F7AFF1D49C1310065FC1D /* BFShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowViewController.swift; sourceTree = "<group>"; };
 		370F7B011D49C6380065FC1D /* Show.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Show.storyboard; sourceTree = "<group>"; };
 		370F7B051D49C6FE0065FC1D /* String+Bingefish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Bingefish.swift"; sourceTree = "<group>"; };
 		370F7B071D49C7420065FC1D /* BFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFHelper.swift; sourceTree = "<group>"; };
 		370F7B091D49CD5A0065FC1D /* UIColor+Bingefish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Bingefish.swift"; sourceTree = "<group>"; };
 		370F7B0B1D49CF020065FC1D /* BFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFViewController.swift; sourceTree = "<group>"; };
-		370F7B5A1D4AE4000065FC1D /* Bingefish.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bingefish.xcdatamodel; sourceTree = "<group>"; };
 		370F7B5C1D4AEEF50065FC1D /* NSUserDefaults+Bingefish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+Bingefish.swift"; sourceTree = "<group>"; };
 		3755E5F11D4824210057081C /* Bingefish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingefish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3755E6071D4824210057081C /* BingefishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BingefishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +87,11 @@
 		3755E6121D4824210057081C /* BingefishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BingefishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3755E6161D4824210057081C /* BingefishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingefishUITests.swift; sourceTree = "<group>"; };
 		3755E6181D4824210057081C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFShow+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		378FF8A71D50515A0039DB31 /* BFShowDetailImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowDetailImages.swift; sourceTree = "<group>"; };
+		378FF8A91D50515A0039DB31 /* BFActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFActor.swift; sourceTree = "<group>"; };
+		378FF8AB1D50515A0039DB31 /* BFSeason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFSeason.swift; sourceTree = "<group>"; };
+		378FF8AD1D50515A0039DB31 /* BFEpisode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFEpisode.swift; sourceTree = "<group>"; };
+		378FF8AF1D50515A0039DB31 /* BFShowDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowDetail.swift; sourceTree = "<group>"; };
 		379DC2721D4E682800F24031 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		379DC2741D4E6BBF00F24031 /* BFSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFSignUpViewController.swift; sourceTree = "<group>"; };
 		379DC2761D4E6BCE00F24031 /* BFLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFLogInViewController.swift; sourceTree = "<group>"; };
@@ -90,10 +104,8 @@
 		37A49A111D484B30006FE686 /* EBTExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTExtractor.m; sourceTree = "<group>"; };
 		37A49A131D484BFF006FE686 /* Bingefish-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bingefish-Bridging-Header.h"; sourceTree = "<group>"; };
 		37A49A151D4851DB006FE686 /* BFShowCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFShowCollectionViewCell.xib; sourceTree = "<group>"; };
-		37A49A181D485228006FE686 /* BFShowCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		37ADD1391D4834B5003E1D2E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		37ADD13B1D483537003E1D2E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		37ADD13E1D48404A003E1D2E /* BFShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShow.swift; sourceTree = "<group>"; };
 		37D09AF01D482AED000DD4C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37D09AF31D482AFA000DD4C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37D09AF51D482AFA000DD4C2 /* BFFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFFeedViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +153,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37046B841D505BCE00A96071 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				37046B861D505BCE00A96071 /* BFShow.swift */,
+				37046B851D505BCE00A96071 /* BFShow+CoreDataProperties.swift */,
+				37046B871D505BCE00A96071 /* Bingefish.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		37046B8C1D5060BC00A96071 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37046B8D1D5060BC00A96071 /* BFShowCollectionViewCell.swift */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		37046B8E1D5060BC00A96071 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37046B901D5060E400A96071 /* BFShowHeaderTableViewCell.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
 		370F7B031D49C6C50065FC1D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,14 +197,6 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		370F7B4C1D4AD8980065FC1D /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				370F7B591D4AE4000065FC1D /* Bingefish.xcdatamodeld */,
-			);
-			name = CoreData;
-			sourceTree = "<group>";
-		};
 		3755E5E81D4824210057081C = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +205,6 @@
 				3755E60A1D4824210057081C /* BingefishTests */,
 				3755E6151D4824210057081C /* BingefishUITests */,
 				37D09AF21D482AFA000DD4C2 /* Code */,
-				370F7B4C1D4AD8980065FC1D /* CoreData */,
 				F44D9ABF50BD594B7B34F046 /* Frameworks */,
 				37D09AFF1D482B4B000DD4C2 /* Info.plist */,
 				37A49A0D1D484B30006FE686 /* Libraries */,
@@ -260,7 +289,8 @@
 		37A49A171D485207006FE686 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				37A49A181D485228006FE686 /* BFShowCollectionViewCell.swift */,
+				37046B8C1D5060BC00A96071 /* UICollectionViewCell */,
+				37046B8E1D5060BC00A96071 /* UITableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,8 +298,11 @@
 		37ADD13D1D484027003E1D2E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				37ADD13E1D48404A003E1D2E /* BFShow.swift */,
-				379DC26C1D4D46E200F24031 /* BFShow+CoreDataProperties.swift */,
+				378FF8A91D50515A0039DB31 /* BFActor.swift */,
+				378FF8AD1D50515A0039DB31 /* BFEpisode.swift */,
+				378FF8AB1D50515A0039DB31 /* BFSeason.swift */,
+				378FF8AF1D50515A0039DB31 /* BFShowDetail.swift */,
+				378FF8A71D50515A0039DB31 /* BFShowDetailImages.swift */,
 				379DC27A1D4E6F7B00F24031 /* BFUser.swift */,
 			);
 			path = Model;
@@ -281,6 +314,7 @@
 				37D09AF31D482AFA000DD4C2 /* AppDelegate.swift */,
 				37D09B061D482F14000DD4C2 /* Config */,
 				37D09B011D482C4D000DD4C2 /* Controller */,
+				37046B841D505BCE00A96071 /* CoreData */,
 				370F7B031D49C6C50065FC1D /* Extensions */,
 				37ADD13D1D484027003E1D2E /* Model */,
 				370F7B041D49C6CB0065FC1D /* Util */,
@@ -646,28 +680,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				379DC26D1D4D46E200F24031 /* BFShow+CoreDataProperties.swift in Sources */,
 				37A49A121D484B30006FE686 /* EBTExtractor.m in Sources */,
 				370F7B081D49C7420065FC1D /* BFHelper.swift in Sources */,
 				37D09AF81D482AFA000DD4C2 /* BFFeedViewController.swift in Sources */,
 				37D09AF91D482AFA000DD4C2 /* BFSearchViewController.swift in Sources */,
+				378FF8B11D50515A0039DB31 /* BFShowDetailImages.swift in Sources */,
+				378FF8B51D50515A0039DB31 /* BFSeason.swift in Sources */,
 				37D09B031D482CAE000DD4C2 /* BFNetworkController.swift in Sources */,
 				379DC2771D4E6BCE00F24031 /* BFLogInViewController.swift in Sources */,
+				378FF8B91D50515A0039DB31 /* BFShowDetail.swift in Sources */,
 				37D09AF71D482AFA000DD4C2 /* AppDelegate.swift in Sources */,
-				37ADD13F1D48404A003E1D2E /* BFShow.swift in Sources */,
 				379DC2751D4E6BBF00F24031 /* BFSignUpViewController.swift in Sources */,
+				37046B8A1D505BCE00A96071 /* BFShow.swift in Sources */,
+				378FF8B31D50515A0039DB31 /* BFActor.swift in Sources */,
 				370F7B061D49C6FE0065FC1D /* String+Bingefish.swift in Sources */,
 				37D09B051D482CBE000DD4C2 /* BFApp.swift in Sources */,
 				370F7B001D49C1310065FC1D /* BFShowViewController.swift in Sources */,
-				37A49A191D485228006FE686 /* BFShowCollectionViewCell.swift in Sources */,
+				37046B8F1D5060BC00A96071 /* BFShowCollectionViewCell.swift in Sources */,
+				378FF8B71D50515A0039DB31 /* BFEpisode.swift in Sources */,
 				370F7B5D1D4AEEF50065FC1D /* NSUserDefaults+Bingefish.swift in Sources */,
 				379DC2791D4E6EE000F24031 /* BFUserAuthenticationController.swift in Sources */,
 				37D09B081D482F25000DD4C2 /* BFConfig.swift in Sources */,
 				379DC27D1D4E8EA800F24031 /* BFSettingsViewController.swift in Sources */,
 				379DC27B1D4E6F7B00F24031 /* BFUser.swift in Sources */,
+				37046B911D5060E400A96071 /* BFShowHeaderTableViewCell.swift in Sources */,
 				370F7B0C1D49CF030065FC1D /* BFViewController.swift in Sources */,
+				37046B8B1D505BCE00A96071 /* Bingefish.xcdatamodeld in Sources */,
+				37046B891D505BCE00A96071 /* BFShow+CoreDataProperties.swift in Sources */,
 				370F7B0A1D49CD5A0065FC1D /* UIColor+Bingefish.swift in Sources */,
-				370F7B5B1D4AE4000065FC1D /* Bingefish.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,14 +982,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		370F7B591D4AE4000065FC1D /* Bingefish.xcdatamodeld */ = {
+		37046B871D505BCE00A96071 /* Bingefish.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				370F7B5A1D4AE4000065FC1D /* Bingefish.xcdatamodel */,
+				37046B881D505BCE00A96071 /* Bingefish.xcdatamodel */,
 			);
-			currentVersion = 370F7B5A1D4AE4000065FC1D /* Bingefish.xcdatamodel */;
-			name = Bingefish.xcdatamodeld;
-			path = CoreData/Bingefish.xcdatamodeld;
+			currentVersion = 37046B881D505BCE00A96071 /* Bingefish.xcdatamodel */;
+			path = Bingefish.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -4,9 +4,9 @@
         <attribute name="fanartURLString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="seriesName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="tvdbid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showID" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BFShow" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="BFShow" positionX="-36" positionY="-153" width="128" height="105"/>
     </elements>
 </model>
