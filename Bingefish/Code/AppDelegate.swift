@@ -20,9 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     {
         Fabric.with([Crashlytics.self])
         CLSLogv("\(#function):\(#line)", getVaList([]))
-
+        
         self.window!.tintColor = UIColor.bf_tintColor()
-
+        
+        BFSessionController.sharedController.setUp(self)
+        
         return true
     }
 
@@ -59,6 +61,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     
     // MARK: - Core Data stack
     
+    lazy var coreDataFileURL: NSURL? = {
+        return self.applicationDocumentsDirectory.URLByAppendingPathComponent("Bingefish.sqlite")
+    }()
+    
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.xxxx.ProjectName" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -74,16 +80,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
         // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
-        var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("ProjectName.sqlite")
+        var persistentStoreCoordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        let url = self.coreDataFileURL!
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
         
         do {
-            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+            try persistentStoreCoordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
         }
         catch let error as NSError {
-            coordinator = nil
+            persistentStoreCoordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
@@ -94,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             dprint("Unresolved error \(error), \(error.userInfo)")
         } 
         
-        return coordinator
+        return persistentStoreCoordinator
     }()
     
     lazy var managedObjectContext: NSManagedObjectContext? = {

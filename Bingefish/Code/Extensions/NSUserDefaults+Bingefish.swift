@@ -8,7 +8,9 @@
 
 import UIKit
 
-let NSUserDefaultsPreviousSearchedStringKey = "NSUserDefaultsPreviousSearchedStringKey"
+let BFUserDefaultsPreviousSearchedStringKey = "BFUserDefaultsPreviousSearchedStringKey"
+let BFUserDefaultsPreviousBundleVersionKey = "BFUserDefaultsPreviousBundleVersionKey"
+let BFUserDefaultsSessionCountKey = "BFUserDefaultsSessionCountKey"
 
 extension NSUserDefaults
 {

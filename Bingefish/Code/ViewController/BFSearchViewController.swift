@@ -76,7 +76,7 @@ class BFSearchViewController: BFViewController, UICollectionViewDelegate, UIColl
                         strongSelf.shows = shows
                         strongSelf.collectionView?.reloadData()
                         strongSelf.cacheShowsToCoreData()
-                        NSUserDefaults.standardUserDefaults().setObject(string, forKey: NSUserDefaultsPreviousSearchedStringKey)
+                        NSUserDefaults.standardUserDefaults().setObject(string, forKey: BFUserDefaultsPreviousSearchedStringKey)
                     }
                 }
             }
@@ -100,30 +100,30 @@ class BFSearchViewController: BFViewController, UICollectionViewDelegate, UIColl
     func readShowsFromCoreData()
     {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "BFShow")
-    
-        do {
-            let results = try managedContext!.executeFetchRequest(fetchRequest)
-            let manageObjectShows = results as! [NSManagedObject]
-            if shows == nil {
-                shows = [BFShow]()
-            }
+        if let managedContext = appDelegate.managedObjectContext {
+            do {
+                let results = try managedContext.executeFetchRequest(fetchRequest)
+                let manageObjectShows = results as! [NSManagedObject]
+                if shows == nil {
+                    shows = [BFShow]()
+                }
 
-            for manageObjectShow in manageObjectShows {
-                if let show = manageObjectShow as? BFShow {
-                    shows!.append(show)                    
+                for manageObjectShow in manageObjectShows {
+                    if let show = manageObjectShow as? BFShow {
+                        shows!.append(show)                    
+                    }
+                }
+                
+                if shows!.count > 0 {
+                    collectionView.reloadData()
+                    searchController.searchBar.text = NSUserDefaults.standardUserDefaults().objectForKey(BFUserDefaultsPreviousSearchedStringKey) as? String
+                    searchController.searchBar.becomeFirstResponder()
                 }
             }
-            
-            if shows!.count > 0 {
-                self.collectionView?.reloadData()
-                searchController.searchBar.text = NSUserDefaults.standardUserDefaults().objectForKey(NSUserDefaultsPreviousSearchedStringKey) as? String
-                searchController.searchBar.becomeFirstResponder()
+            catch let error as NSError {
+                dprint("Could not fetch \(error), \(error.userInfo)")
             }
-        } 
-        catch let error as NSError {
-            dprint("Could not fetch \(error), \(error.userInfo)")
         }
     }
     

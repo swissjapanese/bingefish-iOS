@@ -13,6 +13,7 @@
 		37046B8B1D505BCE00A96071 /* Bingefish.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37046B871D505BCE00A96071 /* Bingefish.xcdatamodeld */; };
 		37046B8F1D5060BC00A96071 /* BFShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37046B8D1D5060BC00A96071 /* BFShowCollectionViewCell.swift */; };
 		37046B911D5060E400A96071 /* BFShowHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37046B901D5060E400A96071 /* BFShowHeaderTableViewCell.swift */; };
+		37046B951D5199B000A96071 /* BFSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37046B941D5199B000A96071 /* BFSessionController.swift */; };
 		370F7B001D49C1310065FC1D /* BFShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7AFF1D49C1310065FC1D /* BFShowViewController.swift */; };
 		370F7B021D49C6380065FC1D /* Show.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370F7B011D49C6380065FC1D /* Show.storyboard */; };
 		370F7B061D49C6FE0065FC1D /* String+Bingefish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F7B051D49C6FE0065FC1D /* String+Bingefish.swift */; };
@@ -73,6 +74,7 @@
 		37046B881D505BCE00A96071 /* Bingefish.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bingefish.xcdatamodel; sourceTree = "<group>"; };
 		37046B8D1D5060BC00A96071 /* BFShowCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		37046B901D5060E400A96071 /* BFShowHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		37046B941D5199B000A96071 /* BFSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFSessionController.swift; sourceTree = "<group>"; };
 		370F7AFF1D49C1310065FC1D /* BFShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFShowViewController.swift; sourceTree = "<group>"; };
 		370F7B011D49C6380065FC1D /* Show.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Show.storyboard; sourceTree = "<group>"; };
 		370F7B051D49C6FE0065FC1D /* String+Bingefish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Bingefish.swift"; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				37D09B021D482CAE000DD4C2 /* BFNetworkController.swift */,
 				37D09B041D482CBE000DD4C2 /* BFApp.swift */,
 				379DC2781D4E6EE000F24031 /* BFUserAuthenticationController.swift */,
+				37046B941D5199B000A96071 /* BFSessionController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				370F7B001D49C1310065FC1D /* BFShowViewController.swift in Sources */,
 				37046B8F1D5060BC00A96071 /* BFShowCollectionViewCell.swift in Sources */,
 				378FF8B71D50515A0039DB31 /* BFEpisode.swift in Sources */,
+				37046B951D5199B000A96071 /* BFSessionController.swift in Sources */,
 				370F7B5D1D4AEEF50065FC1D /* NSUserDefaults+Bingefish.swift in Sources */,
 				379DC2791D4E6EE000F24031 /* BFUserAuthenticationController.swift in Sources */,
 				37D09B081D482F25000DD4C2 /* BFConfig.swift in Sources */,
@@ -760,7 +764,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BFBundleVersion = "$(BFVersion).$(BFVersionIncrement)";
 				BFVersion = 1.0.0;
-				BFVersionIncrement = 1;
+				BFVersionIncrement = 3;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -813,7 +817,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BFBundleVersion = "$(BFVersion).$(BFVersionIncrement)";
 				BFVersion = 1.0.0;
-				BFVersionIncrement = 1;
+				BFVersionIncrement = 3;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
