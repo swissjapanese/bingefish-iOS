@@ -36,6 +36,11 @@ class BFSeason: NSObject
         for dictionary in dictionaries {
             episodes.append(BFEpisode(dictionary: dictionary))
         }
+        
+        episodes.sortInPlace {
+            return $0.episodeNumber.intValue < $1.episodeNumber.intValue
+        }
+        
         return episodes
     }
 }

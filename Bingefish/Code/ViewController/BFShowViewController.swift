@@ -16,6 +16,7 @@ class BFShowViewController: BFViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var show: BFShow?
     var showDetail: BFShowDetail?
@@ -44,6 +45,8 @@ class BFShowViewController: BFViewController, UITableViewDelegate, UITableViewDa
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200.0
+        
+        activityIndicatorView.hidden = true
     }
 
     override func viewWillAppear(animated: Bool) 
@@ -54,7 +57,13 @@ class BFShowViewController: BFViewController, UITableViewDelegate, UITableViewDa
             return
         }
         
+        activityIndicatorView.hidden = false
+        activityIndicatorView.startAnimating()
+
         BFNetworkController.sharedController.fetchShowDetail(showID, completionHandler: { [weak self] (showDetail, response) in
+            self?.activityIndicatorView.hidden = true
+            self?.activityIndicatorView.stopAnimating()
+            
             if let error = response.result.error {
                 dprint("\(error)")
             }
@@ -120,6 +129,16 @@ class BFShowViewController: BFViewController, UITableViewDelegate, UITableViewDa
         }
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        if section == 0 {
+            return ""
+        }
+        else {
+            return String(format: NSLocalizedString("SEASON_NUMBER", comment: ""), section)
+        }
     }
 }
 

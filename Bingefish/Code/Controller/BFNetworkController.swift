@@ -94,11 +94,17 @@ class BFNetworkController: NSObject
             }
             
             let baseURL = "\(strongSelf.config.BFConfigMainURL)\(strongSelf.config.BFConfigAPIVersion)"
-            dprint("\(method) \(baseURL)\(api)")
-
+            
             Alamofire.request(method, "\(baseURL)\(api)", parameters: parameters)
                 .responseJSON { response in
                     completionHandler(response)
+            }
+            
+            if let parameters = parameters {
+                dprint("\(method) \(baseURL)\(api) \(parameters)")
+            }
+            else {
+                dprint("\(method) \(baseURL)\(api)")
             }
         }
         

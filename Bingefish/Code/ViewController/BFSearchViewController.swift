@@ -178,7 +178,9 @@ class BFSearchViewController: BFViewController, UICollectionViewDelegate, UIColl
     {
         let storyboard = UIStoryboard(name: "Show", bundle: nil)
         if let showViewController = storyboard.instantiateViewControllerWithIdentifier("BFShowViewControllerID") as? BFShowViewController {
-            showViewController.show = shows?[indexPath.row]
+            if let show = shows?[indexPath.row] {
+                showViewController.show = show
+            }
             
             if BFHelper.isIPhoneOrIPod() {
                 self.navigationController?.pushViewController(showViewController, animated: true)

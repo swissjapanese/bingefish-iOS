@@ -21,3 +21,4 @@
 "OK" = "OK";
 "NUMBER_SEASONS" = "%@ Seasons";
 "NUMBER_EPISODES" = "%@ Episodes";
+"SEASON_NUMBER" = "Season %ld";

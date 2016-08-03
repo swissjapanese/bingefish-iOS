@@ -61,6 +61,6 @@ class BFHelper: NSObject
 func dprint(string: String)
 {
     #if DEBUG
-        print("🐸BFDEBUG: \(string)")
+        print("🐸 \(string)")
     #endif
 }

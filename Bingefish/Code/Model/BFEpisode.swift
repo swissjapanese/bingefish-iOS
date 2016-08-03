@@ -20,10 +20,8 @@ class BFEpisode: NSObject
         self.init()
         
         if let extractor = EBTExtractor(dictionary: dictionary) {
-            self.episodeName = extractor.stringForKey("episode_name")
+            self.episodeName = extractor.stringForKey("episode_name") ?? "(episode name missing)"
             self.episodeNumber = extractor.numberForKey("episode_number")!
         }
-        
-        assert(self.episodeName != nil, "episodeName must not be nil")
     }
 }
