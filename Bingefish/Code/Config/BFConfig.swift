@@ -11,5 +11,5 @@ import UIKit
 class BFConfig: NSObject 
 {
     let BFConfigMainURL = "http://bingie-prod.musgbcxca4.us-west-2.elasticbeanstalk.com/"
-    let BFConfigAPIVersion = "api/v1/"
+    let BFConfigAPIPath = "api/"
 }

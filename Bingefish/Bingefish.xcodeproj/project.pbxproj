@@ -764,7 +764,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BFBundleVersion = "$(BFVersion).$(BFVersionIncrement)";
 				BFVersion = 1.0.0;
-				BFVersionIncrement = 3;
+				BFVersionIncrement = 4;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -817,7 +817,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BFBundleVersion = "$(BFVersion).$(BFVersionIncrement)";
 				BFVersion = 1.0.0;
-				BFVersionIncrement = 3;
+				BFVersionIncrement = 4;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
